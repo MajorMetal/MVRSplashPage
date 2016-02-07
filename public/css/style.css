@@ -78,7 +78,7 @@ div.centered > form > input[type="reset"]:hover{
 }
 
 
-video { 
+#bgvid { 
     position: fixed;
     top: 50%;
     left: 50%;
@@ -95,7 +95,7 @@ video {
 .stopfade { 
    opacity: .5;
 }
-}
+
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
     .bgvid {
