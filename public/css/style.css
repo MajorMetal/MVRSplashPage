@@ -78,7 +78,7 @@ div.centered > form > input[type="reset"]:hover{
 }
 
 
-.fullscreen-bg__video {
+.fullscreen-bg_video {
   top: 0;
   left: 0;
   width: 100%;
@@ -96,8 +96,8 @@ div.centered > form > input[type="reset"]:hover{
     /* phones */
 
     .centered {
-    	top:50%;
-    	left:10%;
+    	top:40%;
+    	left:12%;
     	width:75%;
     	height:75%;
     }
