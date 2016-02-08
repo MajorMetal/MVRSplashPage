@@ -5,7 +5,14 @@
 	
 }
 
-
+#video{
+	position: fixed;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
 
 
 #splashFilter{
@@ -20,15 +27,12 @@
 .centered {
   font-family: 'Raleway';
   font-size: 25px;
-  margin-bottom: 1%;
   color:white;
   border-radius: 5%;
   position: fixed;
   bottom:1%;
   left: 2%;
   z-index: 2;
-  height: 35%;
-  width: 35%;
   text-align: center;
   
  
@@ -77,46 +81,26 @@ div.centered > form > input[type="reset"]:hover{
 
 }
 
-
-#bgvid { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
-/* 	background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-*/  background-size: cover;
-  	transition: 1s opacity;
-}
-.stopfade { 
-   opacity: .5;
-}
-
-@media only screen and (min-width: 768px) {
-    /* tablets and desktop */
-    .bgvid {
-    	width:100%;
-    	height: 100%;
-    }
-}
+@media only screen and (min-width: 767px) {
+		.centered {
+    		width:40%;
+    	}
+  }
 
 @media only screen and (max-width: 767px) {
     /* phones */
 
     .centered {
-    	top:40%;
+    	bottom:10%;
     	left:12%;
     	width:75%;
-    	height:75%;
+    	
     }
 
     .monsterText{
     	font-size: 60px;
     	right:10%;
+    	top:10%;
     }
     
 }
