@@ -32,7 +32,7 @@
   position: fixed;
   bottom:1%;
   left: 2%;
-  z-index: 3;
+  z-index: 2;
   text-align: center;
   
  
@@ -40,13 +40,15 @@
 
 .monsterText {
 	font-family: 'Raleway';
-	font-size: 75px;
+  font-size: 60px;
 	color: white;
 	position: fixed;
-  	bottom: 0%;
-  	right: 0;
-  	z-index: 2;
-  	margin:0;
+  bottom: 0%;
+  right: 0%;
+  z-index: 2;
+
+
+  
   
   }
 div.monsterText > p > span {
@@ -89,6 +91,7 @@ div.centered > form > input[type="submit"]:hover{
 		.centered {
     		width:40%;
     	}
+  
   }
 
 @media only screen and (max-width: 767px) {
@@ -102,9 +105,10 @@ div.centered > form > input[type="submit"]:hover{
     }
 
     .monsterText{
-    	font-size: 60px;
+    	
     	right:10%;
     	top:10%;
+      height:25%;
     }
     
 }
