@@ -11,7 +11,7 @@
 	left:0;
 	height: 100%;
 	width: 100%;
-	z-index: -1;
+	z-index: 2;
 }
 
 
@@ -55,12 +55,17 @@ div.monsterText > p > span {
 .monsterText > p {
 	margin: 0;
 }
+.centered > h3 {
+  margin: 0;
+}
 div.centered > form > input[type="text"]{
 	width: 75%;
+  height: 20px;
 	border-radius: 5px;
 }
 div.centered > form > input[type="email"]{
   width: 75%;
+  height: 20px;
   border-radius: 5px;
 }
 
