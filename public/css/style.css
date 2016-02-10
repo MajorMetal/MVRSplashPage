@@ -6,7 +6,7 @@
 }
 
 #video{
-	position: absolute;
+	position: fixed;
 	top:0;
 	left:0;
 	height: 100%;
@@ -42,7 +42,7 @@
 	font-family: 'Raleway';
 	font-size: 75px;
 	color: white;
-	position: absolute;
+	position: fixed;
   	bottom: 0%;
   	right: 0;
   	z-index: 2;
@@ -59,9 +59,13 @@ div.centered > form > input[type="text"]{
 	width: 75%;
 	border-radius: 5px;
 }
+div.centered > form > input[type="email"]{
+  width: 75%;
+  border-radius: 5px;
+}
 
-div.centered > form > input[type="submit"],
-div.centered > form > input[type="reset"]{
+div.centered > form > input[type="submit"]
+{
  	width:25%;
  	margin-top: 5%;
 
@@ -74,12 +78,7 @@ div.centered > form > input[type="submit"]:hover{
  	
 
 }
-div.centered > form > input[type="reset"]:hover{
- 	background-color:red;
- 	border-radius: 5px;
- 	border:none;
 
-}
 
 @media only screen and (min-width: 767px) {
 		.centered {
