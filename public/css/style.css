@@ -11,19 +11,9 @@
 	left:0;
 	height: 100%;
 	width: 100%;
-	z-index: 2;
+	z-index: 3;
 }
 
-
-#splashFilter{
-	position: fixed;
-	top:0;
-	left:0;
-	background-color: rgba(0, 0, 0, .5);
-	height: 100%;
-	width: 100%;
-	z-index: 1;
-}
 .centered {
   font-family: 'Raleway';
   font-size: 25px;
@@ -32,7 +22,7 @@
   position: fixed;
   bottom:1%;
   left: 2%;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   
  
@@ -45,7 +35,7 @@
 	position: fixed;
   bottom: 0%;
   right: 0%;
-  z-index: 2;
+  z-index: 3;
 
 
   
@@ -98,9 +88,10 @@ div.centered > form > input[type="submit"]:hover{
     /* phones */
 
     .centered {
-    	bottom:6%;
-    	left:12%;
-    	width:75%;
+    	bottom:3%;
+    	left:1%;
+      
+
     	
     }
 
@@ -111,6 +102,8 @@ div.centered > form > input[type="submit"]:hover{
       height:25%;
     }
     
+
+
 }
 
 
