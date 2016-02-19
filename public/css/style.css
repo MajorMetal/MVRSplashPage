@@ -106,7 +106,23 @@ div.centered > form > input[type="submit"]:hover{
 
 }
 
+@media only screen and (orientation: landscape) {
+      .centered {
+      bottom:3%;
+      left:1%;
+      
 
+      
+    }
+
+    .monsterText{
+      
+      right:10%;
+      top:10%;
+      
+    }
+        
+}
 
 
 
