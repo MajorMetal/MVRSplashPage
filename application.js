@@ -7,7 +7,7 @@ function ready () {
 
 				iframe.width = '560';
 				iframe.height = '315';
-				iframe.src = 'https://youtu.be/TuapDf6Un7M';
+				iframe.src = 'https://www.youtube.com/embed/TuapDf6Un7M';
 				iframe.frameborder = '0';
 				iframe.allowfullscreen = true;
 
