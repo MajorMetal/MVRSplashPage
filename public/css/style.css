@@ -13,7 +13,11 @@ html, body {
 	font-family: 'Raleway';
 	
 }
+#iframe-container:{
 
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
 #video{
 	position: fixed;
 	top:0;
@@ -21,6 +25,8 @@ html, body {
 	height: 100%;
 	width: 100%;
 	z-index: 3;
+  
+
 }
 
 .centered {
