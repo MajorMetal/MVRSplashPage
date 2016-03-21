@@ -1,0 +1,46 @@
+%header.header
+  %nav.navbar#navbar
+    %ul#navbar-nav
+      %li
+        %p.collapsed#about_toggle{tabindex: '1', data: {target: '#about_collapse'}} About
+      %li
+        %p.collapsed#projects_toggle{tabindex: '7', data: {target: '#projects_collapse'}} Projects
+      %li
+        %p.collapsed#events_toggle{tabindex: '11', data: {target: '#events_collapse'}} Events
+      %li
+        %p.collapsed#contact_toggle{tabindex: '14', data: {target: '#contact_collapse'}} Contact
+
+    %ul.collapse#about_collapse{style: 'height: 0px;'}
+      %li
+        %a{href: '#vision', tabindex: '2'} Vision
+      %li
+        %a{href: '#squad', tabindex: '3'} Team Squad
+      %li
+        %a{href: '#timeline', tabindex: '4'} Timeline
+      %li
+        %a{href: '#clients', tabindex: '5'} Clients
+      %li
+        %a{href: '#process', tabindex: '6'} Process
+
+    %ul.collapse#projects_collapse{style: 'height: 0px;'}
+      %li
+        %a{href: '#games', tabindex: '8'} VR Games
+      %li
+        %a{href: '#experiences', tabindex: '9'} Immersive Experiences
+      %li
+        %a{href: '#videos', tabindex: '10'} 360 Videos
+
+    %ul.collapse#events_collapse{style: 'height: 0px;'}
+      %li
+        %a{href: '#mixer-4', tabindex: '12'} Mixer #4
+
+    %ul.collapse#contact_collapse{style: 'height: 0px;'}
+      %li
+        %a{href: '#vision', tabindex: '15'} Vision
+      %li
+        %a{href: '#squad', tabindex: '16'} Team Squad
+      %li
+        %a{href: '#timeline', tabindex: '17'} Timeline
+      %li
+        %a{href: '#clients', tabindex: '18'} Clients
+

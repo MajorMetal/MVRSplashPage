@@ -1,0 +1,52 @@
+%nav.navbar#navbar{role: 'tablist', aria: {multiselectable: 'false'}}
+  %ul
+    %li
+      %p#about_toggle{role: 'tab', tabindex: '0', data: {toggle: 'collapse', target: '#about_collapse', parent: '#navbar'}, aria: {expanded: 'false', controls: 'about_collapse'}} About
+      %ul.collapse#about_collapse{role: 'tabpanel', aria: {labelledby: 'about_toggle'}}
+        %li
+          %a{href: '#vision'} Vision
+        %li
+          %a{href: '#squad'} Team Squad
+        %li
+          %a{href: '#timeline'} Timeline
+        %li
+          %a{href: '#clients'} Clients
+        %li
+          %a{href: '#process'} Process
+
+    %li
+      %p#projects_toggle{role: 'tab', tabindex: '0', data: {toggle: 'collapse', target: '#projects_collapse', parent: '#navbar'}, aria: {expanded: 'false', controls: 'projects_collapse'}} Projects
+      %ul.collapse#projects_collapse{role: 'tabpanel', aria: {labelledby: 'projects_toggle'}}
+        %li
+          %a{href: '#vision'} Vision
+        %li
+          %a{href: '#squad'} Team Squad
+        %li
+          %a{href: '#timeline'} Timeline
+
+    %li
+      %p#events_toggle{role: 'tab', tabindex: '0', data: {toggle: 'collapse', target: '#events_collapse', parent: '#navbar'}, aria: {expanded: 'false', controls: 'events_collapse'}} Events  
+      %ul.collapse#events_collapse{role: 'tabpanel', aria: {labelledby: 'events_toggle'}}
+        %li
+          %a{href: '#vision'} Vision
+        %li
+          %a{href: '#squad'} Team Squad
+
+    %li
+      %p#contact_toggle{role: 'tab', tabindex: '0', data: {toggle: 'collapse', target: '#contact_collapse', parent: '#navbar'}, aria: {expanded: 'false', controls: 'contact_collapse'}} Contact
+      %ul.collapse#contact_collapse{role: 'tabpanel', aria: {labelledby: 'contact_toggle'}}
+        %li
+          %a{href: '#vision'} Vision
+        %li
+          %a{href: '#squad'} Team Squad
+        %li
+          %a{href: '#timeline'} Timeline
+        %li
+          %a{href: '#clients'} Clients
+
+
+%header.header
+  %label.sr{for: 'navbar-toggle'} Toggle Navigation
+  %input.navbar-toggle#navbar-toggle{type: 'checkbox'}
+  %label.navbar-toggle{for: 'navbar-toggle'}
+    .hamburger

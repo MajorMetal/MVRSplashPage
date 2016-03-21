@@ -1,0 +1,119 @@
+/*=========================
+    Media Query Mixins
+=========================*/
+@mixin phone{
+  @media (max-width:($width-xs-cutoff - 1px)){
+    @content;
+  }
+}
+
+@mixin landscape{
+  @media (max-width:($width-xs-cutoff - 1px)) and (orientation:landscape){
+    @content;
+  }
+}
+
+@mixin tablet{
+  @media (min-width:$width-xs-cutoff){
+    @content;
+  }
+}
+
+@mixin handheld{
+  @media (max-width:($width-sm-cutoff - 1px)){
+    @content;
+  }
+}
+
+@mixin desktop-sm{
+  @media (min-width:$width-sm-cutoff){
+    @content;
+  }
+}
+
+@mixin desktop-lg{
+  @media (min-width:$width-md-cutoff){
+    @content;
+  }
+}
+
+
+/*=========================
+      Modifier Mixins
+=========================*/
+@mixin box-sizing($sizing...){
+  -webkit-box-sizing:$sizing;
+     -moz-box-sizing:$sizing;
+          box-sizing:$sizing;
+}
+
+@mixin transition($transition...){
+  -webkit-transition:$transition;
+          transition:$transition;
+}
+
+@mixin transform($transform...){
+  -webkit-transform:$transform;
+      -ms-transform:$transform;
+          transform:$transform;
+}
+
+@mixin box-shadow($shadow...){
+  -webkit-box-shadow:$shadow;
+     -moz-box-shadow:$shadow;
+          box-shadow:$shadow;
+}
+
+@mixin animation($animation...){
+  -webkit-animation:$animation;
+          animation:$animation;
+}
+
+@mixin user-select($user-select...){
+  -webkit-user-select:$user-select;
+     -moz-user-select:$user-select;
+      -ms-user-select:$user-select;
+          user-select:$user-select;
+}
+
+
+/*=========================
+        Grid System
+=========================*/
+@mixin build-columns($columns){
+  @for $i from $columns through 0 {
+    $width: (100% / $columns) * $i;
+
+    @if $i > 0 {
+      .col-#{$i} {
+        width:$width;
+      }
+
+      .col-offset-#{$i} {
+        margin-left:$width;
+      }
+
+      .col-pull-#{$i} {
+        right:$width;
+      }
+
+      .col-push-#{$i} {
+        left:$width;
+      }
+
+    } @else {
+      .col-offset-#{$i} {
+        margin-left:0;
+      }
+
+      .col-pull-#{$i} {
+        right:0;
+      }
+
+      .col-push-#{$i} {
+        left:0;
+      }
+    } // end conditional
+  } // end for loop
+} // end 'build-columns'
+

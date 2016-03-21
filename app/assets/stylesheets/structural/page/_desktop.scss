@@ -1,0 +1,40 @@
+*,
+*:before,
+*:after{
+  @include box-sizing(inherit);
+}
+
+html{
+  font-size:10px;
+  @include box-sizing(border-box);
+}
+
+html,
+body{
+  height:100%;
+}
+
+body{
+  position:relative;
+  min-width:$width-sm-cutoff;
+  margin:0;
+  padding:0;
+  line-height:1.4285;
+  font-family:'Roboto',Arial,sans-serif;
+  font-size:14px;
+  color:#000;
+  color:rgba(#000,.75);
+  background-color:#FFF;
+  -webkit-font-smoothing:antialiased;
+          font-smoothing:antialiased;
+}
+
+.main{
+  position:relative;
+  height:100%;
+  width:100%;
+  margin-top:48px;
+  background-color:#FFF;
+  z-index:25;
+}
+

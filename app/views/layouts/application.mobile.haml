@@ -1,0 +1,14 @@
+!!!
+%html{lang: 'en-US'}
+  %head
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'}
+    = csrf_meta_tags
+    = stylesheet_link_tag     'mobile'
+    = javascript_include_tag  'mobile'
+    = favicon_link_tag        'favicon.ico'
+    / = content_for :head
+    %title Monster VR
+
+  %body{ontouchstart: ''}
+    = render 'layouts/partials/header'
+    = yield

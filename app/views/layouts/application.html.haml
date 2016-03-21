@@ -1,0 +1,15 @@
+!!!
+%html{lang: 'en-US'}
+  %head
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1'}
+    %link{href: 'https://fonts.googleapis.com/css?family=Dosis:300', rel: 'stylesheet', type: 'text/css'}
+    = csrf_meta_tags
+    = stylesheet_link_tag     'desktop'
+    = javascript_include_tag  'desktop'
+    = favicon_link_tag        'favicon.ico'
+    / = content_for :head
+    %title Monster VR
+
+  %body{data: {spy: 'scroll', target: '#navbar'}}
+    = render 'layouts/partials/header'
+    = yield

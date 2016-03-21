@@ -1,0 +1,66 @@
+/*=========================
+        Clearfix
+=========================*/
+.clearfix:before,
+.clearfix:after,
+.navbar:before,
+.navbar:after,
+.container:before,
+.container:after,
+.row:before,
+.row:after{
+  display:table;
+  content:' ';
+}
+
+.clearfix:after,
+.navbar:after,
+.container:after,
+.row:after{
+  clear:both;
+}
+
+
+/*=========================
+      Screen Reader
+=========================*/
+.sr{
+  position:absolute;
+  height:1px;
+  width:1px;
+  margin:-1px;
+  border:0;
+  padding:0;
+  overflow:hidden;
+}
+
+
+/*=========================
+      Font-Awesome
+=========================*/
+.fa-fw{
+  height:48px;
+  width:48px;
+  text-align:center;
+  line-height:48px;
+}
+
+
+/*=========================
+        Bootstrap
+=========================*/
+.collapse{
+  display:none;
+}
+
+.collapse.in{
+  display:block;
+}
+
+.collapsing{
+  position:relative;
+  height:0;
+  overflow:hidden;
+  @include transition(height .35s ease, visibility .35s ease);
+}
+

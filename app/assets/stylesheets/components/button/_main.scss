@@ -1,0 +1,21 @@
+.button{
+  display:inline-block;
+  padding:12px 24px;
+  border-radius:3px;
+  color:#FFF;
+  color:rgba(#FFF,.8);
+  background-color:$light-green-500;
+  cursor:pointer;
+  text-decoration:none;
+  -ms-touch-action:manipulation;
+      touch-action:manipulation;
+  @include user-select(none);
+
+  &:hover,
+  &:focus,
+  &:active{
+    outline:0;
+    background-color:$light-green-700;
+  }
+}
+
