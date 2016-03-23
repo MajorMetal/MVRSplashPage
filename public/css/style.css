@@ -105,10 +105,6 @@ div.centered > form > input[type="submit"]:hover{
     .centered {
     	bottom:3%;
     	left:1%;
-
-      
-
-    	
     }
 
     .monsterText{
@@ -141,7 +137,20 @@ div.centered > form > input[type="submit"]:hover{
         
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
 
+    .centered {
+      bottom:3%;
+      left:1%;
+    }
+
+    .monsterText{
+      
+      right:10%;
+      top:10%;
+      height:25%;
+    }
+}    
 
 
 
