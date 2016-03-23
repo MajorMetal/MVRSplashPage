@@ -1,8 +1,9 @@
 function ready () {
 			// var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			console.log('going here?');
 
 			if (iOSversion()) {
-				alert('is iOS');
+				console.log('is iOS');
 				var container = document.querySelector('#iframe-container'),
 					iframe = document.createElement('iframe');
 
@@ -14,7 +15,7 @@ function ready () {
 
 				container.appendChild(iframe);
 			} else {
-				alert('is not iOS');
+				console.log('is not iOS');
 			}
 		}
 		
