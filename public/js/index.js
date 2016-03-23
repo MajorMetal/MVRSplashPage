@@ -2,7 +2,7 @@ function ready () {
 			// var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 			if (iOSversion()) {
-				var iframe = document.querySelector('#video'),
+				var iframe = document.querySelector('#video');
 					// iframe = document.createElement('iframe');
 
 				iframe.width 	= '560';
