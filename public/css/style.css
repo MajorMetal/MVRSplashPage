@@ -1,155 +1,93 @@
-html, body {
-     background: transparent !important;
-     color: transparent !important;
-     background-color: transparent !important;
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     -webkit-backface-visibility: visible;
-}
-
 @font-face {
-	font-family: 'Raleway';
-	
-}
-#iframe-container:{
-
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-}
-#video{
-	position: fixed;
-	top:0;
-	left:0;
-	height: 100%;
-	width: 100%;
-	z-index: 3;
-  
-
-}
-
-.centered {
   font-family: 'Raleway';
-  font-size: 25px;
-  color:white;
-  border-radius: 5%;
+}
+
+html,
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: 'Raleway';
+  color: transparent !important;
+  background-color: transparent !important;
+  -webkit-backface-visibility: visible;
+}
+
+.video{
   position: fixed;
-  bottom:1%;
-  left: 2%;
-  z-index: 3;
-  text-align: center;
-  
- 
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
 }
 
-.monsterText {
-	font-family: 'Raleway';
-  font-size: 60px;
-	color: white;
-	position: fixed;
-  bottom: 0%;
-  right: 0%;
-  z-index: 3;
-
-
-  
-  
-  }
-div.monsterText > p > span {
-  	color:rgb(35,255,68);
-}
-.monsterText > p {
-	margin: 0;
-}
-.centered > h3 {
+.text {
+  position: relative;
   margin: 0;
+  font-size: 80px;
+  color: white;
+  text-align: center;
+  z-index: 4;
 }
-div.centered > form > input[type="text"]{
-	width: 75%;
-  height: 20px;
-	border-radius: 5px;
+
+.text span {
+  color: rgb(35,255,68);
 }
-div.centered > form > input[type="email"]{
-  width: 75%;
-  height: 20px;
+
+.row {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+}
+
+.column {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  z-index: 4;
+}
+
+.column:before,
+.column:after {
+  content: " ";
+  display: table;
+}
+
+.column:after {
+  clear: both;
+
+}
+
+.button{
+  display:inline-block;
+  min-width: 200px;
+  margin: 0 20px;
   border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 35px;
+  font-family: 'Raleway';
+  color: #fff;
+  background-color: rgb(35,255,68);
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  outline: 0;
 }
 
-div.centered > form > input[type="submit"]
-{
- 	width:25%;
- 	margin-top: 5%;
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 550px) {
+/* Styles */
 
- 	transition: background-color 0.25s;
- }
-div.centered > form > input[type="submit"]:hover{
- 	background-color:rgb(35,255,68);
- 	border-radius: 5px;
- 	border:none;
- 	
-
-}
-
-
-@media only screen and (min-width: 767px) {
-		.centered {
-    		width:40%;
-    	}
-  
+  .column{
+    left: 25%
+    width: 50%;
   }
 
-@media only screen and (max-width: 767px) {
-    /* phones */
-
-    .centered {
-    	bottom:3%;
-    	left:1%;
-    }
-
-    .monsterText{
-    	
-    	right:10%;
-    	top:10%;
-      height:25%;
-    }
-    
-
-
-}
-
-@media only screen and (orientation: landscape) {
-      .centered {
-      bottom:1%;
-      left:1%;
-      width:30%;
-      
-
-      
-    }
-
-     .monsterText{
-      
-      right:25%;
-      top:5%;
-      height:25%;
-    }
-        
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
-
-    .centered {
-      bottom:3%;
-      
-    }
-
-    .monsterText{
-      
-      font-size:50px; 
-      top:15%;
-      height:25%;
-    }
+   
 }    
 
 
