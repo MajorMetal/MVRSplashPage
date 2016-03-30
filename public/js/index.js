@@ -5,7 +5,7 @@ function ready () {
 		
 		 iframe.width 	= '560';
 		 iframe.height 	= '315';
-		 iframe.src 		= 'https://www.youtube.com/embed/_F6JwJ_i-Ls';
+		 iframe.src 		= 'https://www.youtube.com/embed/kbAuLJH7AjE';
 	}
 }
 		
