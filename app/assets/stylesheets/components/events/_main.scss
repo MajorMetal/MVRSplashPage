@@ -1,0 +1,81 @@
+.event {
+  border-top: 4px solid $light-green-300;
+  padding: 24px 0 8px;
+
+  &:last-child {
+    border-bottom: 4px solid $light-green-300;
+  }
+
+  h3 {
+    margin-bottom: 12px;
+  }
+}
+
+.event__header:before,
+.event__header:after,
+.event__body:before,
+.event__body:after {
+  display: table;
+  content: ' ';
+}
+
+.event__header:after,
+.event__body:after {
+  clear: both;
+}
+
+.event__header {
+  & > :last-child {
+    text-align: center;
+  }
+}
+
+.event__details {
+  max-width: 500px;
+}
+
+.event__timer {
+  top: -24px;
+
+  h1,
+  h6 {
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Dosis';
+    color: rgba($blue-300,.75);
+  }
+
+  h6 {
+    text-transform: uppercase;
+  }
+
+  .row > div {
+    padding: 0;
+  }
+}
+
+.event__controls {
+  height: 16px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+
+  &:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  &[aria-expanded='true']:after {
+    content: '\f106  Hide Details \f106';
+  }
+
+  &[aria-expanded='false']:after {
+    content: '\f107  Show Details \f107';
+  }
+}

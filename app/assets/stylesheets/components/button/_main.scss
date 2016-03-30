@@ -1,21 +1,23 @@
-.button{
-  display:inline-block;
-  padding:12px 24px;
-  border-radius:3px;
-  color:#FFF;
-  color:rgba(#FFF,.8);
-  background-color:$light-green-500;
-  cursor:pointer;
-  text-decoration:none;
-  -ms-touch-action:manipulation;
-      touch-action:manipulation;
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 3px;
+  color: rgba(#FFF,.8);
+  background-color: $light-green-500;
+  cursor: pointer;
+  text-decoration: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   @include user-select(none);
+
+  &.btn--sml {
+    padding: 4px 8px;
+  }
 
   &:hover,
   &:focus,
-  &:active{
-    outline:0;
-    background-color:$light-green-700;
+  &:active {
+    outline: 0;
+    background-color: $light-green-700;
   }
-}
-
+} // end .btn

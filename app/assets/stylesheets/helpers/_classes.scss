@@ -8,59 +8,109 @@
 .container:before,
 .container:after,
 .row:before,
-.row:after{
-  display:table;
-  content:' ';
+.row:after {
+  display: table;
+  content: ' ';
 }
 
 .clearfix:after,
 .navbar:after,
 .container:after,
-.row:after{
-  clear:both;
+.row:after {
+  clear: both;
 }
 
 
 /*=========================
       Screen Reader
 =========================*/
-.sr{
-  position:absolute;
-  height:1px;
-  width:1px;
-  margin:-1px;
-  border:0;
-  padding:0;
-  overflow:hidden;
+.sr {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 
 /*=========================
       Font-Awesome
 =========================*/
-.fa-fw{
-  height:48px;
-  width:48px;
-  text-align:center;
-  line-height:48px;
+.fa-fw {
+  height: 48px;
+  width: 48px;
+  text-align: center;
+  line-height: 48px;
 }
 
 
 /*=========================
         Bootstrap
 =========================*/
-.collapse{
-  display:none;
-}
+.collapse {
+  display: none;
 
-.collapse.in{
-  display:block;
-}
+  &.in {
+    display: block;
+  }
+} // end '.collapse'
 
-.collapsing{
-  position:relative;
-  height:0;
-  overflow:hidden;
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
   @include transition(height .35s ease, visibility .35s ease);
 }
 
+
+/*=========================
+           Other
+=========================*/
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  @include transform(scale(0,0));
+  @include animation(buttonClick .7s);
+}
+
+.hamburger {
+  top: 26px;
+  left: 16px;
+
+  @include landscape {
+    top: 22px;
+    left: 14px;
+  }
+
+  @include tablet {
+    top: 30px;
+    left: 18px;
+  }
+
+  &,
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 24px;
+    background-color: #000;
+    @include transition(all .3s cubic-bezier(.4,0,.2,1));
+  }
+
+  &:before,
+  &:after {
+    content: '';
+  }
+
+  &:before {
+    top: -6px;
+  }
+
+  &:after {
+    top: 6px;
+  }
+} // end '.hamburger'

@@ -1,17 +1,33 @@
-.container#events
-  .row#mixer-4
-    .col-7
-      %h2 Monster Mixer #4
-      %h6 April 11, 2016
-      %h6 The Copper Door - 225 1/2 N. Broadway, Santa Ana, CA
-      %p Join us for the 4th Monster Monday on April 11th. Hello Monsters! Do you remember being in the classic Arcade as a kid? We are bringing it back with VR E-Sports.
-    .col-5
-      %h1.timer#mixer-4-timer
-      .col-3
-        %h6 Days
-      .col-4.col-offset-1
-        %h6 Hours
-      .col-4
-        %h6 Minutes
-      .col-12
-        %a.button{href: '#events'} Buy Tickets
+.container.events#events{role: 'tablist', aria: {multiselectable: 'false'}}
+  .row.event
+    .event__header#mixer-4{role: 'tab'}
+      .col-6
+        %h3 Monster Mixer #4
+        %h6 April 11th, 2016
+      .col-6
+        %a.btn{href: '#events'} Buy Tickets
+
+    .event__body.collapse#mixer-4-body{role: 'tabpanel', aria: {labelledby: 'mixer-4'}}
+      .col-6
+        %h6 The Copper Door - 225 1/2 N. Broadway, Santa Ana, CA
+        %p.event__details Join us for the 4th Monster Monday on April 11th. Hello Monsters! Do you remember being in the classic Arcade as a kid? We are bringing it back with VR E-Sports.
+
+      .col-6.event__timer
+        .row#mixer-4-timer
+          .col-3.col-offset-1
+            %h1.days
+          .col-3
+            %h1.hours
+          .col-1
+            %h1 :
+          .col-3
+            %h1.minutes
+        .row
+          .col-3.col-offset-1
+            %h6 Days
+          .col-3
+            %h6 Hours
+          .col-3.col-offset-1
+            %h6 Minutes
+
+    .event__controls{data: {toggle: 'collapse', parent: '#events', target: '#mixer-4-body'}, aria: {expanded: 'false', controls: 'mixer-4-body'}}

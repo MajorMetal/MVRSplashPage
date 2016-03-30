@@ -1,3 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-  if (navbarController) { navbarController() }
+DOMEvent.add(document, 'DOMContentLoaded', function() {
+  navController();
+  countdownController();
+  scrollController();
 });

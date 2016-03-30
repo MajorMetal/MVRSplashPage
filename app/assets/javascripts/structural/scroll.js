@@ -1,18 +1,29 @@
-$(function() {
-  $("a[href*='#']:not([href='#'])").click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var hash    = this.hash;
-          target  = $(hash);
+var scrollController = (function() {
+  // Function variables.
+  var checkIfInView;
 
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - 48
-        }, 1000);
+  // jQuery variables.
+  var $elements = $('.image--client');
+  var $window   = $(window);
 
-        return false;
-      }
-    }
-  });
+
+  checkIfInView = function checkIfInView() {
+    var windowBottom  = $window.scrollTop() + $window.height();
+    var timer         = 100;
+
+    $.each($elements, function() {
+      var $element  = $(this);
+      var offset    = $element.offset().top + 48;
+
+      if (offset <= windowBottom && $element.hasClass('hidden')) {
+        setTimeout(function() {
+          $element.removeClass('hidden');
+        }, timer);
+
+        timer += 250;
+      };
+    });
+  };
+
+  $window.on('scroll', checkIfInView);
 });

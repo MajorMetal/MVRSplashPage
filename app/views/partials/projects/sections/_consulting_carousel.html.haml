@@ -1,0 +1,41 @@
+.tab.fade#consulting{role: 'tabpanel'}
+  .carousel.slide#consulting-carousel{data: {ride: 'carousel', interval: 'false'}}
+    .carousel-inner{role: 'listbox'}
+      .item.active
+        .col-12
+          %h3 Mattel
+
+        .col-3.col-offset-1
+          %img{src: asset_path('gatball-1.jpg')}
+        .col-4
+          .embed
+            %iframe{src: 'https://www.youtube.com/embed/TuapDf6Un7M', allowfullscreen: 'true'}
+        .col-3
+          %img{src: asset_path('gatball-2.jpg')}
+
+        .col-8.col-offset-2
+          %p Tattooed pug XOXO narwhal, meditation locavore keytar quinoa organic man braid swag green juice affogato cray. Flannel brooklyn man bun, meh scenester semiotics taxidermy tofu tote bag. Meditation brunch squid chicharrones bespoke, plaid umami dreamcatcher messenger bag 3 wolf moon deep v ugh tote bag truffaut four dollar toast. Mustache swag blog, keffiyeh flexitarian sriracha hammock organic forage celiac locavore. Post-ironic intelligentsia locavore flexitarian, venmo tote bag dreamcatcher austin messenger bag microdosing plaid helvetica affogato typewriter pour-over. Umami intelligentsia put a bird on it, everyday carry photo booth shoreditch kale chips normcore venmo next level. Poutine chambray sriracha XOXO viral, occupy pour-over banh mi polaroid thundercats flexitarian.
+
+      .item
+        .col-12
+          %h3 JMP Creative
+
+        .col-3.col-offset-1
+          %img{src: asset_path('gatball-1.jpg')}
+        .col-4
+          .embed
+            %iframe{src: 'https://www.youtube.com/embed/TuapDf6Un7M', allowfullscreen: 'true'}
+        .col-3
+          %img{src: asset_path('gatball-2.jpg')}
+
+        .col-8.col-offset-2
+          %p Tattooed pug XOXO narwhal, meditation locavore keytar quinoa organic man braid swag green juice affogato cray. Flannel brooklyn man bun, meh scenester semiotics taxidermy tofu tote bag.
+
+
+    %a.left.carousel-control{href: '#consulting-carousel', role: 'button', data: {slide: 'prev'}}
+      %span.fa.fa-chevron-left{aria: {hidden: 'true'}}
+      %span.sr Previous
+
+    %a.right.carousel-control{href: '#consulting-carousel', role: 'button', data: {slide: 'next'}}
+      %span.fa.fa-chevron-right{aria: {hidden: 'true'}}
+      %span.sr Next

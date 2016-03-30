@@ -1,38 +1,38 @@
 /*=========================
     Media Query Mixins
 =========================*/
-@mixin phone{
-  @media (max-width:($width-xs-cutoff - 1px)){
+@mixin phone {
+  @media (max-width:($width-xs-cutoff - 1px)) {
     @content;
   }
 }
 
-@mixin landscape{
-  @media (max-width:($width-xs-cutoff - 1px)) and (orientation:landscape){
+@mixin landscape {
+  @media (max-width:($width-xs-cutoff - 1px)) and (orientation:landscape) {
     @content;
   }
 }
 
-@mixin tablet{
-  @media (min-width:$width-xs-cutoff){
+@mixin tablet {
+  @media (min-width:$width-xs-cutoff) {
     @content;
   }
 }
 
-@mixin handheld{
-  @media (max-width:($width-sm-cutoff - 1px)){
+@mixin handheld {
+  @media (max-width:($width-sm-cutoff - 1px)) {
     @content;
   }
 }
 
-@mixin desktop-sm{
-  @media (min-width:$width-sm-cutoff){
+@mixin desktop-sm {
+  @media (min-width:$width-sm-cutoff) {
     @content;
   }
 }
 
-@mixin desktop-lg{
-  @media (min-width:$width-md-cutoff){
+@mixin desktop-lg {
+  @media (min-width:$width-md-cutoff) {
     @content;
   }
 }
@@ -41,46 +41,82 @@
 /*=========================
       Modifier Mixins
 =========================*/
-@mixin box-sizing($sizing...){
-  -webkit-box-sizing:$sizing;
-     -moz-box-sizing:$sizing;
-          box-sizing:$sizing;
+@mixin box-sizing($sizing...) {
+  -webkit-box-sizing: $sizing;
+     -moz-box-sizing: $sizing;
+          box-sizing: $sizing;
 }
 
-@mixin transition($transition...){
-  -webkit-transition:$transition;
-          transition:$transition;
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+          transition: $transition;
 }
 
-@mixin transform($transform...){
-  -webkit-transform:$transform;
-      -ms-transform:$transform;
-          transform:$transform;
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+      -ms-transform: $transform;
+          transform: $transform;
 }
 
-@mixin box-shadow($shadow...){
-  -webkit-box-shadow:$shadow;
-     -moz-box-shadow:$shadow;
-          box-shadow:$shadow;
+@mixin transform-origin($origin...) {
+  -webkit-transform-origin: $origin;
+     -moz-transform-origin: $origin;
+          transform-origin: $origin;
 }
 
-@mixin animation($animation...){
-  -webkit-animation:$animation;
-          animation:$animation;
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
 }
 
-@mixin user-select($user-select...){
-  -webkit-user-select:$user-select;
-     -moz-user-select:$user-select;
-      -ms-user-select:$user-select;
-          user-select:$user-select;
+@mixin animation($animation...) {
+  -webkit-animation: $animation;
+          animation: $animation;
+}
+
+@mixin user-select($user-select...) {
+  -webkit-user-select: $user-select;
+     -moz-user-select: $user-select;
+      -ms-user-select: $user-select;
+          user-select: $user-select;
+}
+
+@mixin transition-transform($timing...) {
+  -webkit-transition: -webkit-transform $timing;
+     -moz-transition:    -moz-transform $timing;
+          transition:         transform $timing;
+}
+
+@mixin animation-name($name...) {
+  -webkit-animation-name: $name;
+     -moz-animation-name: $name;
+          animation-name: $name;
+}
+
+@mixin animation-direction($direction...) {
+  -webkit-animation-direction: $direction;
+     -moz-animation-direction: $direction;
+          animation-direction: $direction;
+}
+
+@mixin animation-duration($duration...) {
+  -webkit-animation-duration: $duration;
+     -moz-animation-duration: $duration;
+          animation-duration: $duration;
+}
+
+@mixin animation-timing($timing...) {
+  -webkit-animation-timing-function: $timing;
+     -moz-animation-timing-function: $timing;
+          animation-timing-function: $timing;
 }
 
 
 /*=========================
         Grid System
 =========================*/
-@mixin build-columns($columns){
+@mixin build-columns($columns) {
   @for $i from $columns through 0 {
     $width: (100% / $columns) * $i;
 
@@ -114,6 +150,7 @@
         left:0;
       }
     } // end conditional
-  } // end for loop
-} // end 'build-columns'
 
+  } // end for loop
+
+} // end 'build-columns'

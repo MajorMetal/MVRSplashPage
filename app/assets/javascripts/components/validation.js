@@ -1,32 +1,4 @@
 // =========================
-//      Event Listeners
-// =========================
-  // Adds an event to the DOM
-  function addEvent (element, type, eventHandler) {
-    if (element.addEventListener) { // For all major browsers, except IE 8 and earlier
-      element.addEventListener(type, eventHandler);
-    } else { // For IE 8 and earlier versions
-      element.attachEvent('on' + type, eventHandler);
-    }
-  }
-
-
-// =========================
-//  Element Class Changing
-// =========================
-// Updates the element's class name
-    // - Removes validation classes and adds new class if supplied
-function updateClass (element, klass) {
-  return element.className.replace(/(invalid|valid)/, '') + (klass || '');
-}
-
-// Checks if the class is a part of the element className
-function hasClass (element, klass) {
-  return (' ' + element.className + ' ').indexOf(' ' + klass + ' ') >= 0;
-}
-
-
-// =========================
 //        Validation
 // =========================
 var validation = (function () {

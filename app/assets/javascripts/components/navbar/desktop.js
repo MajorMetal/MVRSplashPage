@@ -1,18 +1,28 @@
-var navbarController = (function () {
-  var navbar        = document.querySelector('.navbar'),
-      pLinks        = navbar.querySelectorAll('p'),
-      aLinks        = navbar.querySelectorAll('a'),
-      navbarToggle  = document.getElementById('navbar-toggle'),
-      header        = document.querySelector('.header'),
-      main          = document.querySelector('.main'),
-      mouseClicked;
+var navController = (function() {
+  // Function variables.
+  var includes;
+  var createClickRipple;
+  var rippleCreation;
+  var clickHandler;
+  var menuClose;
+  var openSubMenu;
+
+  // DOM Element variables.
+  var nav         = document.getElementById('nav');
+  var navButtons  = nav.querySelectorAll('p');
+  var navLinks    = nav.querySelectorAll('a');
+
+  // Regular variables.
+  var mouseClicked;
 
 
-// =========================
-//     Element Creators
-// =========================
-  // Ripple used for click animations
-  function createClickRipple (yPos, xPos, width) {
+  // Converts jQuery array search to boolean.
+  includes = function includes(element, collection) {
+    return $.inArray(element, collection) > -1;
+  };
+
+  // Builds the ripple element for onclick event.
+  createClickRipple = function createClickRipple(yPos, xPos, width) {
     var element = document.createElement('span');
 
     element.className             = 'ripple';
@@ -23,73 +33,80 @@ var navbarController = (function () {
     element.style.backgroundColor = '#616161';
 
     return element;
-  }
+  };
 
-
-// =========================
-//      Event Handlers
-// =========================
-  function rippleCreation (event) {
+  // Navbar button/link onmousedown event handler.
+  rippleCreation = function rippleCreation(event) {
     if (!mouseClicked) {
-      var self    = this,
-          ripple  = createClickRipple(event.offsetY, event.offsetX, (this.clientHeight + this.clientWidth));
+      var target  = event.target;
+      var ripple  = createClickRipple(
+                      event.offsetY,
+                      event.offsetX,
+                      (target.clientHeight + target.clientWidth)
+                    );
 
       mouseClicked = true;
-      self.appendChild(ripple);
+      target.appendChild(ripple);
 
-      setTimeout(function () {
-        self.removeChild(ripple);
+      setTimeout(function() {
+        target.removeChild(ripple);
         mouseClicked = false;
       }, 700);
     }
 
-    if (document.activeElement == this) {
-      triggerEvent(this, 'focus');
-    }
-  }
+    if (document.activeElement == target) DOMEvent.trigger(target, 'focus');
+  };
 
-  function collapseUpdater () {
-    var self = this,
-        array = $(".collapse.in:not(" + this.getAttribute('data-target') + ")");
+  clickHandler = function clickHandler(event) {
+    if (includes(event.target, navButtons) || includes(event.target, navLinks)) {
+      var target  = $(event.target.hash);
 
-    toggleClass(self, 'focused');
+      rippleCreation(event);
+      
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - 48
+        }, 1000);
+      };
 
-    $.each(array, function (index, element) {
-      removeClass(document.querySelector("[data-target='#" + element.id + "']"), 'focused');
+    };
+  };
+
+  // Navbar button onfocus event handler.
+  openSubMenu = function openSubMenu() {
+    var $this   = $(this);
+    var target  = $this.data('target');
+    var array   = $(".collapse.in:not(" + target + ")");
+
+    $this.toggleClass('focused');
+
+    $.each(array, function(index, element) {
+      $("[data-target='#" + element.id + "']").removeClass('focused');
       $(element).collapse('hide');
     });
 
-    setTimeout(function () {
-      $(".collapse" + self.getAttribute('data-target')).collapse('toggle');
+    setTimeout(function() {
+      $(".collapse" + target).collapse('toggle');
     }, array.length ? 350 : 0);
-  }
 
-  function menuCloser () {
-    removeClass(document.querySelector("[data-target='#" + this.parentNode.parentNode.id + "']"), 'focused');
+  };
+
+  // Navbar link onmouseup event handler.
+  menuCloser = function menuCloser() {
+    $("[data-target='#" + this.parentNode.parentNode.id + "']").removeClass('focused');
     $(".collapse.in").collapse('hide');
-  }
-
-  function scrollFunction () {
-    scrollPosition();
-  }
+  };
 
 
+  // Event Listeners.
+  DOMEvent.add(nav, 'mousedown', clickHandler);
 
-// =========================
-//      Event Listeners
-// =========================
-  for (var i = 0; i < pLinks.length; i++) {
-    addEvent(pLinks[i], 'mousedown', rippleCreation);
-    addEvent(pLinks[i], 'focus', collapseUpdater);
-  }
+  for (var i = 0; i < navButtons.length; i++) {
+    DOMEvent.add(navButtons[i], 'focus', openSubMenu);
+  };
 
-  for (var i = 0; i < aLinks.length; i++) {
-    addEvent(aLinks[i], 'mousedown', rippleCreation);
-    addEvent(aLinks[i], 'mouseup', menuCloser);
-  }
-
-  onscroll = scrollFunction;
-  scrollFunction();
+  for (var i = 0; i < navLinks.length; i++) {
+    DOMEvent.add(navLinks[i], 'mouseup', menuCloser);
+  };
 
 });
-

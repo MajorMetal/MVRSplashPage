@@ -29,6 +29,12 @@ body{
           font-smoothing:antialiased;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .main{
   position:relative;
   height:100%;
