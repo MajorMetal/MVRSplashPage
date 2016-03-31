@@ -9,9 +9,9 @@
 //= require bootstrap/tab
 //= require bootstrap/carousel
 //= require domEvents
-//= require structural/helpers
 //= require structural/scroll
 //= require structural/countdown
 //= require components/navbar/desktop
 //= require components/timeline/timeline
+//= require components/validation/validation
 //= require initialize

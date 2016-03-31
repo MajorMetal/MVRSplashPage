@@ -1,23 +1,25 @@
 %header.header#header
-  %nav.nav#nav
-    %ul.nav__menu
-      %li
-        %p{tabindex: '1', data: {target: '#about-collapse'}} About
-      %li
-        %a{href: '#projects', tabindex: '7'} Projects
-      %li
-        %a{href: '#events', tabindex: '8'} Events
-      %li
-        %a{href: '#contact', tabindex: '9'} Contact
+  .video-filler
 
-    %ul.nav__sub-menu.collapse#about-collapse{style: 'height: 0px;'}
-      %li
-        %a{href: '#vision', tabindex: '2'} Vision
-      %li
-        %a{href: '#squad', tabindex: '3'} Team Squad
-      %li
-        %a{href: '#timeline', tabindex: '4'} Timeline
-      %li
-        %a{href: '#clients', tabindex: '5'} Clients
-      %li
-        %a{href: '#process', tabindex: '6'} Process
+%nav.nav#nav
+  %ul.nav__menu
+    %li
+      %p{tabindex: '1', data: {target: '#about-collapse'}} About
+    %li
+      %a{href: '#projects', tabindex: '7'} Projects
+    %li
+      %a{href: '#events', tabindex: '8'} Events
+    %li
+      %a{href: '#contact', tabindex: '9'} Contact
+
+  %ul.nav__sub-menu.collapse#about-collapse{style: 'height: 0px;'}
+    %li
+      %a{href: '#vision', tabindex: '2'} Vision
+    %li
+      %a{href: '#squad', tabindex: '3'} Team Squad
+    %li
+      %a{href: '#timeline', tabindex: '4'} Timeline
+    %li
+      %a{href: '#clients', tabindex: '5'} Clients
+    %li
+      %a{href: '#process', tabindex: '6'} Process

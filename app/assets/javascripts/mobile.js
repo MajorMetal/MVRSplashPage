@@ -5,6 +5,5 @@
 //= require jquery.touchSwipe
 //= require bootstrap/transition
 //= require bootstrap/collapse
-//= require structural/helpers
 //= require components/navbar/mobile
 //= require initialize

@@ -58,7 +58,7 @@ var navController = (function() {
   };
 
   clickHandler = function clickHandler(event) {
-    if (includes(event.target, navButtons) || includes(event.target, navLinks)) {
+    if (includes(event.target, navLinks)) {
       var target  = $(event.target.hash);
 
       rippleCreation(event);
@@ -67,6 +67,26 @@ var navController = (function() {
         $('html, body').animate({
           scrollTop: target.offset().top - 48
         }, 1000);
+      };
+
+    } else if (includes(event.target, navButtons)) {
+      var scrollPos = $(window).scrollTop();
+      var target = $(event.target.getAttribute('data-target'));
+
+      rippleCreation(event);
+
+      if (scrollPos <= 0) {
+
+        $('html, body').animate({
+          scrollTop: scrollPos + 80
+        }, 250);
+
+      } else if (scrollPos === 80 && target.attr('aria-expanded') === 'true') {
+
+        $('html, body').animate({
+          scrollTop: 0
+        }, 250);
+
       };
 
     };

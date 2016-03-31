@@ -8,9 +8,9 @@ class MainController < ApplicationController
   private
     def valid_info
       ValidateInfo.new({
-        name: params[:name],
-        email: params[:email],
-        message: params[:message]
+        name:     params[:name],
+        email:    params[:email],
+        message:  params[:message]
       }).valid?
     end
 

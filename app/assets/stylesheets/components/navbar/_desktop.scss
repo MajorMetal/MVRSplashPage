@@ -1,14 +1,23 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   z-index: 50;
 }
 
+.video-filler {
+  height: 100vh;
+  height: calc(100vh - 48px);
+  width: 100%;
+  background-color: $gray-200;
+}
+
 .nav {
+  position: absolute;
+  top: 100vh;
+  top: calc(100vh - 48px);
   min-height: 48px;
   width: 100%;
+  z-index: 50;
 
   li,
   p,

@@ -1,0 +1,35 @@
+.footer {
+  height: 48px;
+  width: 100%;
+  color: rgba(#FFF, .8);
+  background-color: $gray-900;
+
+  p {
+    margin: 0;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  a{
+    display: inline-block;
+    float: left;
+    width: 48px;
+    font-size: 24px;
+    line-height: 48px;
+    text-decoration: none;
+    text-align: center;
+  }
+}
+
+.social-media {
+  width: 96px;
+  margin: 0 auto;
+}
+
+.fa-twitter-square {
+  color: #55ACEE;
+}
+
+.fa-facebook-square {
+  color: #3B5998;
+}
