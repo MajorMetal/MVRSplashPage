@@ -1,9 +1,8 @@
-%nav.nav#nav{role: 'tablist', aria: {multiselectable: 'false'}}
+%nav.nav#nav
   %ul.nav__menu
     %li
-      %p#about_toggle{role: 'tab', tabindex: '0', data: {toggle: 'collapse', target: '#about_collapse', parent: '#navbar'}, aria: {expanded: 'false', controls: 'about_collapse'}} About
-      
-      %ul.collapse#about_collapse{role: 'tabpanel', aria: {labelledby: 'about_toggle'}}
+      %p#about-toggle{tabindex: '0', data: {toggle: 'collapse', target: '#about-collapse'}, aria: {expanded: 'false', controls: 'about-collapse'}} About
+      %ul.nav__sub-menu.collapse#about-collapse{aria: {labelledby: 'about-toggle'}}
         %li
           %a{href: '#vision'} Vision
         %li
@@ -16,41 +15,14 @@
           %a{href: '#process'} Process
 
     %li
-      %p#projects_toggle{role: 'tab', tabindex: '0', data: {toggle: 'collapse', target: '#projects_collapse', parent: '#navbar'}, aria: {expanded: 'false', controls: 'projects_collapse'}} Projects
-      
-      %ul.collapse#projects_collapse{role: 'tabpanel', aria: {labelledby: 'projects_toggle'}}
-        %li
-          %a{href: '#vision'} Vision
-        %li
-          %a{href: '#squad'} Team Squad
-        %li
-          %a{href: '#timeline'} Timeline
-
+      %a{href: '#projects'} Projects
     %li
-      %p#events_toggle{role: 'tab', tabindex: '0', data: {toggle: 'collapse', target: '#events_collapse', parent: '#navbar'}, aria: {expanded: 'false', controls: 'events_collapse'}} Events  
-      
-      %ul.collapse#events_collapse{role: 'tabpanel', aria: {labelledby: 'events_toggle'}}
-        %li
-          %a{href: '#vision'} Vision
-        %li
-          %a{href: '#squad'} Team Squad
-
+      %a{href: '#events'} Events
     %li
-      %p#contact_toggle{role: 'tab', tabindex: '0', data: {toggle: 'collapse', target: '#contact_collapse', parent: '#navbar'}, aria: {expanded: 'false', controls: 'contact_collapse'}} Contact
-      
-      %ul.collapse#contact_collapse{role: 'tabpanel', aria: {labelledby: 'contact_toggle'}}
-        %li
-          %a{href: '#vision'} Vision
-        %li
-          %a{href: '#squad'} Team Squad
-        %li
-          %a{href: '#timeline'} Timeline
-        %li
-          %a{href: '#clients'} Clients
+      %a{href: '#contact'} Contact
 
-
-%header.header
-  %label.sr{for: 'navbar-toggle'} Toggle Navigation
+%header.header#header
+  %label.sr{for: 'nav-toggle'} Toggle Navigation
   %input.nav-toggle#nav-toggle{type: 'checkbox'}
-  %label.nav-toggle{for: 'navbar-toggle'}
+  %label.nav-toggle{for: 'nav-toggle'}
     .hamburger

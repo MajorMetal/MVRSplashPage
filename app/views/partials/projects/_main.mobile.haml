@@ -1,0 +1,41 @@
+.container#projects{role: 'tablist'}
+  .projects
+    .clearfix#games{role: 'tab'}
+      .col-sm-2
+        %h5 Games
+      .col-sm-2
+        %a.btn{href: '#games-content', role: 'button',
+                data: {toggle: 'collapse', parent: '#projects'},
+                aria: {expanded: 'false', controls: 'games-content'}} Learn More
+      .col-sm-4
+        = render 'partials/projects/sections/games_carousel'
+
+    .clearfix#experiences{role: 'tab'}
+      .col-sm-2
+        %h5 Experiences
+      .col-sm-2
+        %a.btn{href: '#experiences-content', role: 'button',
+                data: {toggle: 'collapse', parent: '#projects'},
+                aria: {expanded: 'false', controls: 'experiences-content'}} Learn More
+      .col-sm-4
+        = render 'partials/projects/sections/experiences_carousel'
+
+    .clearfix#videos{role: 'tab'}
+      .col-sm-2
+        %h5 360 Videos
+      .col-sm-2
+        %a.btn{href: '#videos-content', role: 'button',
+                data: {toggle: 'collapse', parent: '#projects'},
+                aria: {expanded: 'false', controls: 'videos-content'}} Learn More
+      .col-sm-4
+        = render 'partials/projects/sections/videos_carousel'
+
+    .clearfix#consulting{role: 'tab'}
+      .col-sm-2
+        %h5 Consulting
+      .col-sm-2
+        %a.btn{href: '#consulting-content', role: 'button',
+                data: {toggle: 'collapse', parent: '#projects'},
+                aria: {expanded: 'false', controls: 'consulting-content'}} Learn More
+      .col-sm-4
+        = render 'partials/projects/sections/consulting_carousel'

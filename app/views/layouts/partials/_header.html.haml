@@ -4,7 +4,7 @@
 %nav.nav#nav
   %ul.nav__menu
     %li
-      %p{tabindex: '1', data: {target: '#about-collapse'}} About
+      %p#about-toggle{tabindex: '1', data: {target: '#about-collapse'}} About
     %li
       %a{href: '#projects', tabindex: '7'} Projects
     %li
@@ -12,7 +12,7 @@
     %li
       %a{href: '#contact', tabindex: '9'} Contact
 
-  %ul.nav__sub-menu.collapse#about-collapse{style: 'height: 0px;'}
+  %ul.nav__sub-menu.collapse#about-collapse{style: 'height: 0px;', aria: {labelledby: 'about-toggle'}}
     %li
       %a{href: '#vision', tabindex: '2'} Vision
     %li

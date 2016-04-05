@@ -8,7 +8,6 @@
 
   &:before {
     display: none;
-    content: 'desktop';
   }
 
   &.loaded {
@@ -56,19 +55,16 @@
 
   a {
     position: absolute;
-    bottom: -16px;
+    bottom: -24px;
     height: 48px;
     width: 48px;
     text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    color: rgba(#000, .75);
     z-index: 2;
     @include transform(translateZ(0));
 
     &:after {
       position: absolute;
-      bottom: 9px;
+      bottom: 10px;
       left: 50%;
       height: 16px;
       width: 16px;
@@ -81,16 +77,16 @@
     }
 
     &:hover:after {
-      background-color: $light-green-500;
       border-color: $light-green-500;
+      background-color: $light-green-500;
     }
 
     &.selected {
       pointer-events: none;
 
       &:after {
-        background-color: $light-green-500;
         border-color: $light-green-500;
+        background-color: $light-green-500;
       }
     }
 

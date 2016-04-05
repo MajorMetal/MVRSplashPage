@@ -2,4 +2,4 @@
 
 Rails.application.config.assets.version = '1.0'
 
-Rails.application.config.assets.precompile += %w( mobile.js  mobile.css  desktop.js  desktop.css )
+Rails.application.config.assets.precompile += %w(mobile.js  mobile.css  desktop.js  desktop.css)

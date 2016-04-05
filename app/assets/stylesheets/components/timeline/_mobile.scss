@@ -1,5 +1,29 @@
 @import 'components/timeline/main';
 
-.timeline:before {
-  content: 'mobile';
-}
+.timeline {
+  &:before {
+    content: 'mobile';
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  @include tablet {
+    .hidden {
+      display: block;
+    }
+  }
+} // end '.timeline'
+
+.events__content {
+  li {
+    padding: 0;
+  }
+
+  @include tablet {
+    li {
+      padding: 0 32px;
+    }
+  }
+} // end '.events__content'

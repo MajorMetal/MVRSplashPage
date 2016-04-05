@@ -1,14 +1,30 @@
 .event {
   border-top: 4px solid $light-green-300;
   padding: 24px 0 8px;
+  text-align: center;
 
   &:last-child {
     border-bottom: 4px solid $light-green-300;
   }
 
+  h3,
+  h4,
+  h6 {
+    text-align: left;
+  }
+
   h3 {
     margin-bottom: 12px;
   }
+
+  h4 {
+    margin-bottom: 0;
+  }
+
+  p {
+    text-align: justify;
+  }
+
 }
 
 .event__header:before,
@@ -22,12 +38,6 @@
 .event__header:after,
 .event__body:after {
   clear: both;
-}
-
-.event__header {
-  & > :last-child {
-    text-align: center;
-  }
 }
 
 .event__details {
@@ -54,7 +64,7 @@
   .row > div {
     padding: 0;
   }
-}
+} // end '.evnet__timer'
 
 .event__controls {
   height: 16px;
@@ -78,4 +88,4 @@
   &[aria-expanded='false']:after {
     content: '\f107  Show Details \f107';
   }
-}
+} // end '.event__controls'

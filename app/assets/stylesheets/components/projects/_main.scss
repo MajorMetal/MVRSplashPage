@@ -3,7 +3,7 @@
   list-style: none;
   text-align: center;
 
-  li {
+  & > li {
     position: relative;
     display: inline-block;
     float: left;
@@ -75,4 +75,4 @@
       margin-top: 24px;
     }
   }
-}
+} // end '.carousel'

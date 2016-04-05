@@ -2,12 +2,14 @@ var navController = (function() {
   // Function variables.
   var createClickRipple;
   var rippleCreation;
+  var clickHandler;
   var menuCloser;
   var menuToggle;
 
   // DOM Element variables.
   var main          = document.getElementById('main');
   var header        = document.getElementById('header');
+  var footer        = document.getElementById('footer');
   var navToggle     = document.getElementById('nav-toggle');
   var nav           = document.getElementById('nav');
   var navButtons    = nav.querySelectorAll('p');
@@ -55,6 +57,21 @@ var navController = (function() {
     }
   };
 
+  clickHandler = function clickHandler(event) {
+    if (includes(event.target, navLinks) || includes(event.target, navButtons)) {
+      var target  = $(event.target.hash);
+
+      rippleCreation(event);
+      
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - $(header).height()
+        }, 1000);
+      };
+
+    };
+  };
+
   // Navbar link onmouseup event handler.
   menuCloser = function menuCloser() {
     navToggle.checked = !navToggle.checked;
@@ -64,13 +81,15 @@ var navController = (function() {
   // Navbar toggle onchange event handler.
   menuToggle = function menuToggle() {
     if (this.checked) {
-      navbar.className  = 'navbar nav--open';
+      nav.className     = 'nav nav--open';
       header.className  = 'header nav--open';
       main.className    = 'main nav--open';
+      footer.className  = 'footer nav--open';
     } else {
-      navbar.className  = 'navbar';
+      nav.className     = 'nav';
       header.className  = 'header';
       main.className    = 'main';
+      footer.className  = 'footer';
     };
   };
 
@@ -78,40 +97,11 @@ var navController = (function() {
 // =========================
 //      Event Listeners
 // =========================
-  DOMEvent.add(nav, 'mousedown', function(event) {
-    if (includes(event.target, navButtons) ||
-        includes(event.target, navLinks)) {
-      rippleCreation(event);
-    };
-  });
+  DOMEvent.add(nav, 'mousedown', clickHandler);
 
   for (var i = 0; i < navLinks.length; i++) {
     DOMEvent.add(navLinks[i], 'mouseup', menuCloser);
   };
 
   DOMEvent.add(navToggle, 'change', menuToggle);
-
-
-// =========================
-//     Menu Touch Swipe
-// =========================
-  $('main').swipe({
-    preventDefaultEvents: false,
-    allowPageScroll: 'VERTICAL',
-    swipeRight: function() {
-      navToggle.checked = true;
-      DOMEvent.trigger(navToggle, 'change');
-    }
-  });
-
-  $('label.nav-toggle').swipe({
-    preventDefaultEvents: false,
-    allowPageScroll: 'VERTICAL',
-    excludedElements: 'button, input, select, textarea, a, .noSwipe',
-    swipeLeft: function() {
-      navToggle.checked = false;
-      DOMEvent.trigger(navToggle, 'change');
-    }
-  });
-
 });

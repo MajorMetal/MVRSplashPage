@@ -8,7 +8,9 @@
 .container:before,
 .container:after,
 .row:before,
-.row:after {
+.row:after,
+.footer:before,
+.footer:after {
   display: table;
   content: ' ';
 }
@@ -16,7 +18,8 @@
 .clearfix:after,
 .navbar:after,
 .container:after,
-.row:after {
+.row:after,
+.footer:after {
   clear: both;
 }
 

@@ -9,9 +9,17 @@
 //= require bootstrap/tab
 //= require bootstrap/carousel
 //= require domEvents
-//= require structural/scroll
-//= require structural/countdown
+//= require structural/scroll/desktop
 //= require components/navbar/desktop
-//= require components/timeline/timeline
+//= require components/timeline/desktop
 //= require components/validation/validation
-//= require initialize
+//= require components/button/button
+//= require components/countdown/main
+
+DOMEvent.add(document, 'DOMContentLoaded', function() {
+  scrollController();
+  buttonController();
+  navController();
+  countdownController();
+  validationController();
+});

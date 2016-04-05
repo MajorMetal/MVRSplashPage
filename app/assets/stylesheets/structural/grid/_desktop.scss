@@ -1,6 +1,6 @@
-.row{
-  margin-right:-16px;
-  margin-left:-16px;
+.row {
+  margin-right: -16px;
+  margin-left: -16px;
 }
 
 .col-1,
@@ -14,12 +14,11 @@
 .col-9,
 .col-10,
 .col-11,
-.col-12{
-  position:relative;
-  float:left;
-  padding-right:16px;
-  padding-left:16px;
+.col-12 {
+  position: relative;
+  float: left;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
-@include build-columns(12);
-
+@include build-columns('', 12);

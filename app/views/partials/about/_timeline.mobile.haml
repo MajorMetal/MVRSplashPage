@@ -1,0 +1,116 @@
+.container#timeline
+  .timeline
+    .events
+      .events__container
+        %ul.events__list
+          %li
+            %a.selected{href: "#", data: {date: "01/08/2013"}} 01 Aug
+          %li
+            %a{href: "#", data: {date: "14/04/2014"}} 14 Apr
+          %li
+            %a{href: "#", data: {date: "19/09/2014"}} 19 Sep
+          %li
+            %a{href: "#", data: {date: "01/01/2015"}} 01 Jan
+          %li
+            %a{href: "#", data: {date: "24/04/2015"}} 24 Apr
+          %li
+            %a{href: "#", data: {date: "12/07/2015 T 00:00"}} 12 Jul
+          %li
+            %a{href: "#", data: {date: "12/07/2015 T 23:59"}} 12 Jul
+          %li
+            %a{href: "#", data: {date: "16/11/2015"}} 16 Nov
+          %li
+            %a{href: "#", data: {date: "20/11/2015"}} 20 Nov
+          %li
+            %a{href: "#", data: {date: "05/12/2015"}} 05 Dec
+
+          %span.filling-line{aria: {hidden: "true"}}
+    
+      %ul.events__navigation
+        %li
+          %a.prev.inactive{href: "#"}Prev
+        %li
+          %a.next{href: "#"} Next
+
+      %ul.events__content
+        %li.selected{data: {date: "01/08/2013"}}
+          .col-sm-4.col-lg-4
+            %h4 VR Birth
+            %h6 August 1st, 2013
+            %p Oculus VR development kit arrives from Kickstarter. VR in the 21st century is born. Dylan, the founder, tries Zelda for the first time in VR and decides his mission is to gift people with that same sense of wonder.
+          .col-lg-4.hidden
+            %img{src: asset_path('vr-birth.jpg')}
+
+        %li{data: {date: "14/04/2014"}}
+          .col-sm-4.col-lg-4
+            %h4 OCVR
+            %h6 April 14th, 2014
+            %p This meetup group became a nexus point for VR developers. They specialized in virtual reality game jams and hackathons, creating virtual reality content by community driven design. Little technology was being developed around the new VR technology.
+          .col-lg-4.hidden
+            %img{src: asset_path('ocvr.jpg')}
+
+        %li{data: {date: "19/09/2014"}}
+          .col-sm-4.col-lg-4
+            %h4 JMP Creative
+            %h6 September 19th, 2014
+            %p The team consulted, developed, and implemented the virtual reality sector for JMP Creative. The highly regarded JMP Creative company is a product development powerhouse. They have over a billion units of product sold.
+          .col-lg-4.hidden
+            %img{src: asset_path('jmp-lrg.png')}
+
+        %li{data: {date: "01/01/2015"}}
+          .col-sm-4.col-lg-4
+            %h4 Monster VR
+            %h6 January 1st, 2015
+            %p The company officially launched Monster VR as its own independent creative development house. The focus is on high technology and creative design. The goal is to mix technology of internet of things (IOT), robotics, virtual reality, and augmented reality to execute on big idea.
+          .col-lg-4.hidden
+            %img{src: asset_path('monstervr.png')}
+
+        %li{data: {date: "24/04/2015"}}
+          .col-sm-4.col-lg-4
+            %h4 Mattel
+            %h6 April 24th, 2015
+            %p The collaboration with JMP Creative resulted in a royalty deal with Mattel. The product is set to launch in winter 2017. It is a mix of IOT, toyetic design, and virtual reality.
+          .col-lg-4.hidden
+            %img{src: asset_path('mattel-lrg.png')}
+
+        %li{data: {date: "12/07/2015 T 00:00"}}
+          .col-sm-4.col-lg-4
+            %h4 SoCal VR Con
+            %h6 July 12th, 2015
+            %p SoCal VR powered by Monster VR hosted the first ever multi-community VR conference in Southern California at the UCI campus. There were for 800 attendees, 60 exhibitors, 35 speakers, 8 panels, and it was streamed in 360. The VR communities include Long Beach VR, San Diego VR, Silicon Valley VR, San Francisco VR, VR Los Angeles, and Las Vegas VR.
+          .col-lg-4.hidden
+            %img{src: asset_path('socalvrcon.png')}
+
+        %li{data: {date: "12/07/2015 T 23:59"}}
+          .col-sm-4.col-lg-4
+            %h4 San Diego Zoo
+            %h6 July 12th, 2015
+            %p The San Diego Zoo contacted Monster VR to produce a 360 video shoot. The Tech to Reconnect program implements different technology to allow people to empathize with the natural world. Viewers were able to experience life in a habitat at the zoo with the animals.
+          .col-lg-4.hidden
+            %img{src: asset_path('techtoreconnect.jpg')}
+
+        %li{data: {date: "16/11/2015"}}
+          .col-sm-4.col-lg-4
+            %h4 Monster Mondays
+            %h6 November 16th, 2015
+            %p This is a monthly community event showcasing guerrilla style VR demos with alcohol-infused enthusiasm at a speakeasy in Santa Ana, CA. The location is steps away from the first ever eSports arena. This is an ongoing social experiment to see what VR experiences resonate with the community best.
+          .col-lg-4.hidden
+            %img{src: asset_path('monster-monday.jpg')}
+
+        %li{data: {date: "20/11/2015"}}
+          .col-sm-4.col-lg-4
+            %h4 UCI Hackathon
+            %h6 November 20th, 2015
+            %p Monster VR was sponsored by Oculus and Unity to provide gear and creative licenses. Monster VR were mentors and judges for the developers at the world’s largest hackathon. This event was held at the first ever North American eSports arena.
+          .col-lg-4.hidden
+            %img{src: asset_path('hackuci.png')}
+
+        %li{data: {date: "05/12/2015"}}
+          .col-sm-4.col-lg-4
+            %h4 VR Film School
+            %h6 December 5th, 2015
+            %p This 2-day educational workshop taught people how to go from nothing to becoming VR directors. Students ranged from 15 year olds to Oscar winners from Disney and Dreamworks. The focus was to teach the connection between VR and 360 video.
+          .col-lg-4.hidden
+            .embed
+              %iframe{src: 'https://www.youtube.com/embed/TuapDf6Un7M', allowfullscreen: 'true'}
+

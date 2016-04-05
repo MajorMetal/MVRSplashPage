@@ -1,3 +1,6 @@
+/*=========================
+          Header
+=========================*/
 .header {
   position: fixed;
   top: 0;
@@ -7,7 +10,11 @@
   padding: 0 16px;
   background-color: #FFF;
   z-index: 50;
-  @include transition(all .3s cubic-bezier(.4,0,.2,1));
+  @include transition(left .3s cubic-bezier(.4,0,.2,1));
+
+  &.nav--open {
+    left: 260px;
+  }
 
   @include landscape {
     height: 48px;
@@ -15,11 +22,6 @@
 
   @include tablet {
     height: 64px;
-  }
-
-  &.nav--open {
-    width: calc(100% - 260px);
-    left: 260px;
   }
 } // end '.header'
 
@@ -45,30 +47,27 @@ label.nav-toggle {
     padding: 32px;
   }
 
-  input.nav-toggle:checked ~ &{
+  input.nav-toggle:checked ~ & {
     position: fixed;
     top: 0;
     height: 100%;
     width: 100%;
     z-index: 75;
 
-    .hamburger {
-      &:before,
-      &:after {
-        width: 12px;
-      }
+    .hamburger:before,
+    .hamburger:after {
+      width: 12px;
+    }
 
-      &:before {
-        top: -5px;
-        @include transform(rotate(-45deg));
-      }
+    .hamburger:before {
+      top: -5px;
+      @include transform(rotate(-45deg));
+    }
 
-      &:after {
-        top: 5px;
-        @include transform(rotate(45deg));
-      }
-    } // end '.hamburger'
-
+    .hamburger:after {
+      top: 5px;
+      @include transform(rotate(45deg));
+    }
   } // end 'input.nav-toggle:checked ~ label.nav-toggle'
 
 } // end 'label.nav-toggle'
@@ -80,12 +79,10 @@ label.nav-toggle {
 .nav {
   position: fixed;
   top: 0;
+  bottom: 0;
   left: -260px;
-  height: 100%;
   width: 260px;
   background-color: $gray-900;
-  overflow-x: hidden;
-  overflow-y: auto;
   z-index: 0;
   -webkit-overflow-scrolling: touch;
   @include transition(left 0s cubic-bezier(.4,0,.2,1) .3s);
@@ -94,14 +91,35 @@ label.nav-toggle {
     left: 0;
     @include transition(left 0s cubic-bezier(.4,0,.2,1) 0s);
   }
+
+  p,
+  a {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .01em;
+    color: rgba(#FFF,.8);
+    overflow: hidden;
+    @include transition(background-color .25s);
+
+    &:focus {
+      background-color: $gray-700;
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $gray-800;
+    }
+  } // end '.nav p,a'
+
+  a {
+    text-decoration: none;
+  }
+
 } // end '.nav'
 
 .nav__menu {
-  li {
-    font-weight: 500;
-    letter-spacing: .01em;
-  }
-
   & > li {
     &:not(:first-child) {
       border-top: 2px solid $gray-700;
@@ -115,27 +133,12 @@ label.nav-toggle {
 
   p,
   a {
-    position:r elative;
-    display: block;
-    font-size: 14px;
-    color: rgba(#FFF,.8);
-    overflow: hidden;
-    @include transition(background-color .25s);
-
-    &:focus {
-      background-color: $gray-700;
-      outline: none;
-    }
-
-    &:hover {
-      background-color: $gray-800;
-    }
-  } // end '.nav__menu p,a'
+    padding-left: 24px;
+    line-height: 64px;
+  }
 
   p {
     margin: 0;
-    padding-left: 24px;
-    line-height: 64px;
 
     &:after {
       float: right;
@@ -153,10 +156,11 @@ label.nav-toggle {
     }
   } // end '.nav__menu p'
 
+} // end '.nav__menu'
+
+.nav__sub-menu {
   a {
     padding-left: 48px;
     line-height: 48px;
-    text-decoration: none;
   }
-
-} // end '.nav__menu'
+}

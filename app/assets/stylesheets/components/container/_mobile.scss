@@ -1,0 +1,45 @@
+.container {
+  margin: 16px 0;
+  padding: 8px 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+} // end '.container'
+
+.vision {
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+  }
+
+  span {
+    color: $light-green-500;
+  }
+
+  p {
+    width: 90%;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include tablet {
+    h2 {
+      line-height: 126px;
+      font-size: 112px;
+      font-weight: 300;
+      letter-spacing: -4px;
+    }
+
+    span {
+      display: block;
+    }
+
+    p:first-child {
+      margin-top: 15px;
+    }
+  } // end tablet
+
+} // end '.vision'

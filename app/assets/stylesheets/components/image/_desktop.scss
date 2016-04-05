@@ -20,7 +20,7 @@ img {
     top: 50%;
     @include transform(translateY(-50%));
   }
-} // end '.image'
+} // end '.image--client'
 
 .image--team {
   position: relative;

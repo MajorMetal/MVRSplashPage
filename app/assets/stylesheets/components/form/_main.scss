@@ -28,7 +28,7 @@
     text-align: center;
     line-height: 32px;
   }
-}
+} // end '.form'
 
 .input {
   position: relative;
@@ -45,6 +45,7 @@
     background-color: #FFF;
     border: 1px solid $gray-300;
     border-radius: 4px;
+    -webkit-appearance: none;
 
     &:focus {
       border-color: $blue-300;
@@ -77,7 +78,7 @@
       border-color: #B71C1C;
     }
 
-  } // end '.input input, textarea'
+  } // end '.input input,textarea'
 
   input {
     height: 32px;

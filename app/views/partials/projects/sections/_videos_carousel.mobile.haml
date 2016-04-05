@@ -1,0 +1,38 @@
+.collapse#videos-content{role: 'tabpanel', aria: {labelledby: 'videos'}}
+  .carousel.slide#videos-carousel{data: {ride: 'carousel', interval: 'false'}}
+    %a.left.carousel-control{href: '#videos-carousel', role: 'button', data: {slide: 'prev'}}
+      %span.fa.fa-chevron-left{aria: {hidden: 'true'}}
+      %span.sr Previous
+
+    %a.right.carousel-control{href: '#videos-carousel', role: 'button', data: {slide: 'next'}}
+      %span.fa.fa-chevron-right{aria: {hidden: 'true'}}
+      %span.sr Next
+
+    %ul.carousel-indicators
+      %li.active{data: {target: '#videos-carousel', slide: {to: '0'}}}
+      %li{data: {target: '#videos-carousel', slide: {to: '1'}}}
+
+    .carousel-inner{role: 'listbox'}
+      .item.active
+        .col-sm-4
+          %h3 San Diego Zoo
+
+        .col-sm-2
+          %img{src: asset_path('gatball-1.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+        .col-sm-2
+          %img{src: asset_path('gatball-2.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+
+        .col-sm-4
+          %p Meditation brunch squid chicharrones bespoke, plaid umami dreamcatcher messenger bag 3 wolf moon deep v ugh tote bag truffaut four dollar toast. Mustache swag blog, keffiyeh flexitarian sriracha hammock organic forage celiac locavore.
+
+      .item
+        .col-sm-4
+          %h3 Some Other Video
+
+        .col-sm-2
+          %img{src: asset_path('gatball-1.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+        .col-sm-2
+          %img{src: asset_path('gatball-2.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+
+        .col-sm-4
+          %p Tattooed pug XOXO narwhal, meditation locavore keytar quinoa organic man braid swag green juice affogato cray. Flannel brooklyn man bun, meh scenester semiotics taxidermy tofu tote bag.

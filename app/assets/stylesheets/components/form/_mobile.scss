@@ -1,0 +1,16 @@
+@import 'components/form/main';
+
+.form .btn {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.input {
+  input {
+    min-height: 40px;
+  }
+
+  textarea {
+    min-height: 80px;
+  }
+}
