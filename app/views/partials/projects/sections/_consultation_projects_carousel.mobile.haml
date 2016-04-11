@@ -1,0 +1,36 @@
+.collapse#consultation-projects-content{role: 'tabpanel', aria: {labelledby: 'consultation-projects'}}
+  .carousel.slide#consultation-projects-carousel{data: {ride: 'carousel', interval: 'false'}}
+    %a.left.carousel-control{href: '#consultation-projects-carousel', role: 'button', data: {slide: 'prev'}}
+      %span.fa.fa-chevron-left{aria: {hidden: 'true'}}
+      %span.sr Previous
+
+    %a.right.carousel-control{href: '#consultation-projects-carousel', role: 'button', data: {slide: 'next'}}
+      %span.fa.fa-chevron-right{aria: {hidden: 'true'}}
+      %span.sr Next
+
+    %ul.carousel-indicators
+      %li.active{data: {target: '#consultation-projects-carousel', slide: {to: '0'}}}
+      %li{data: {target: '#consultation-projects-carousel', slide: {to: '1'}}}
+      %li{data: {target: '#consultation-projects-carousel', slide: {to: '2'}}}
+
+    .carousel-inner{role: 'listbox'}
+      .item.active
+        .col-sm-4
+          %h4 VR Development
+
+          %img{src: asset_path('vr-development.jpg')}
+          %p We have experience developing on all the latest VR/AR hardware. Oculus, Vive, Gear, Cardboard and more. If you need help with a flushing out an idea or getting it to developed, we can help.
+
+      .item
+        .col-sm-4
+          %h4 Training
+
+          %img{src: asset_path('training.jpg')}
+          %p Trying to be current in the modern day of data overload is near impossible. Let us help get you and your company back up to speed. We will help identify your needs, develop a plan and help train your people in virtual reality and 360 video development.
+
+      .item
+        .col-sm-4
+          %h4 Business Strategy
+
+          %img{src: asset_path('business-strategy.jpg')}
+          %p Virtual reality brings in a ton of new opportunity to capture more business and engage your clients. Let’s develop a strategy to make sure you capitalize on the most immersive medium ever created. We are experts at bringing companies up to speed in the world of VR.

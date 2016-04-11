@@ -1,0 +1,41 @@
+.collapse#vr-projects-content{role: 'tabpanel', aria: {labelledby: 'vr-projects'}}
+  .carousel.slide#vr-projects-carousel{data: {ride: 'carousel', interval: 'false'}}
+    %a.left.carousel-control{href: '#vr-projects-carousel', role: 'button', data: {slide: 'prev'}}
+      %span.fa.fa-chevron-left{aria: {hidden: 'true'}}
+      %span.sr Previous
+
+    %a.right.carousel-control{href: '#vr-projects-carousel', role: 'button', data: {slide: 'next'}}
+      %span.fa.fa-chevron-right{aria: {hidden: 'true'}}
+      %span.sr Next
+
+    %ul.carousel-indicators
+      %li.active{data: {target: '#vr-projects-carousel', slide: {to: '0'}}}
+      %li{data: {target: '#vr-projects-carousel', slide: {to: '1'}}}
+      %li{data: {target: '#vr-projects-carousel', slide: {to: '2'}}}
+
+    .carousel-inner{role: 'listbox'}
+      .item.active
+        .col-sm-4
+          %h4 Gatball
+
+          .embed
+            %iframe{src: 'https://www.youtube.com/embed/c3MKdvbRF1I', allowfullscreen: 'true'}
+
+          %p Gatball is a two player experience where you use your GUNSWORD to shoot and smack the soccer-like-ball into the other players net to score a goal. The player with the highest number of goals scored wins the game. Inside the Gatball battle grounds there is a window streaming in the webcam of your pc, so you can watch your friends cheer you on.
+
+      .item
+        .col-sm-4
+          %h4 Sweet Escape VR
+
+          .embed
+            %iframe{src: 'https://www.youtube.com/embed/H0uiC8hcSeM', allowfullscreen: 'true'}
+
+          %p Sweet Escape VR is a multiplayer vr game. If you would imagine Hansel and Gretel meets ninja warrior. Two players race against each other and time to get to the checkered flag lollipop. You move by using your hands to climb like some sugar rushed chimp. It is currently available for early access via the steam store.
+
+      .item
+        .col-sm-4
+          %h4 Old Sparky
+
+          %img{src: asset_path('old-sparky-1.gif'), data: {toggle: 'modal', target: '#image-modal'}}
+
+          %p This is a FULLY immersive VR experience where the player is literally shocked. The concept was developed at the horror themed VR hackathon we hosted. We used shock pads, arduinos, LED lights, Haptic Vest and Oculus Dk2 to create the experience. When the light on the back of the chair goes off the person in the chair is ready to be shocked. The next person in line flips the switch and the player is literally SHOCKED.

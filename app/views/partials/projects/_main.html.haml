@@ -1,19 +1,19 @@
 .container#projects
   %ul.projects{role: 'tablist'}
     %li.active{role: 'presentation'}
-      %h5 Games
-      %a.btn.btn--sml{href: '#games', role: 'tab', data: {toggle: 'tab'}, aria: {controls: 'games'}} Learn More
+      %h5 Virtual Reality
+      %a.btn.btn--sml{href: '#vr-projects', role: 'tab', data: {toggle: 'tab'}, aria: {controls: 'vr-projects'}} Learn More
     %li{role: 'presentation'}
-      %h5 Experiences
-      %a.btn.btn--sml{href: '#experiences', role: 'tab', data: {toggle: 'tab'}, aria: {controls: 'experiences'}} Learn More
+      %h5 Events
+      %a.btn.btn--sml{href: '#events-projects', role: 'tab', data: {toggle: 'tab'}, aria: {controls: 'events-projects'}} Learn More
     %li{role: 'presentation'}
       %h5 360 Videos
-      %a.btn.btn--sml{href: '#videos', role: 'tab', data: {toggle: 'tab'}, aria: {controls: 'videos'}} Learn More
+      %a.btn.btn--sml{href: '#videos-projects', role: 'tab', data: {toggle: 'tab'}, aria: {controls: 'videos-projects'}} Learn More
     %li{role: 'presentation'}
-      %h5 Consulting
-      %a.btn.btn--sml{href: '#consulting', role: 'tab', data: {toggle: 'tab'}, aria: {controls: 'consulting'}} Learn More
+      %h5 Consultation
+      %a.btn.btn--sml{href: '#consultation-projects', role: 'tab', data: {toggle: 'tab'}, aria: {controls: 'consultation-projects'}} Learn More
 
-  = render 'partials/projects/sections/games_carousel'
-  = render 'partials/projects/sections/experiences_carousel'
-  = render 'partials/projects/sections/videos_carousel'
-  = render 'partials/projects/sections/consulting_carousel'
+  = render 'partials/projects/sections/vr_projects_carousel'
+  = render 'partials/projects/sections/events_projects_carousel'
+  = render 'partials/projects/sections/videos_projects_carousel'
+  = render 'partials/projects/sections/consultation_projects_carousel'

@@ -62,11 +62,13 @@ var navController = (function() {
       var target  = $(event.target.hash);
 
       rippleCreation(event);
+
+      alert($(header).height());
       
       if (target.length) {
         $('html, body').animate({
           scrollTop: target.offset().top - $(header).height()
-        }, 1000);
+        }, 750);
       };
 
     };

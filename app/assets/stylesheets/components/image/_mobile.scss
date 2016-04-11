@@ -36,21 +36,20 @@ img {
     @include transition(opacity .35s ease);
   }
 
-  h4,
-  p {
+  h3,
+  h4 {
     position: absolute;
-    height: 0;
+    top: 50%;
+    bottom: 0;
     width: 100%;
     max-width: 500px;
     padding: 0 8px;
     color: #FFF;
     text-align: center;
     overflow: hidden;
-    @include transition(height .35s ease);
-  }
-
-  h4 {
-    top: 0;
+    opacity: 0;
+    @include transform(translateY(-50%));
+    @include transition(opacity .35s ease);
 
     span {
       display: block;
@@ -59,21 +58,14 @@ img {
     }
   }
 
-  p {
-    bottom: 0;
-  }
-
   &:hover{
     img {
       opacity: 0.5;
     }
 
-    h4 {
-      height: 75px;
-    }
-
-    p {
-      height: 75px;
+    h4,
+    h3 {
+      opacity: 1;
     }
   } // end '.image--team:hover'
 

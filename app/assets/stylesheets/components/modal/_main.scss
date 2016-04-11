@@ -1,3 +1,7 @@
+[data-toggle='modal'] {
+  cursor: pointer;
+}
+
 .modal-open {
   overflow: hidden;
 
@@ -26,19 +30,6 @@
 
   &.in .modal-dialog {
     @include transform(translate(0,0));
-  }
-}
-
-.modal-dialog {
-  position: relative;
-  width: auto;
-  margin: 10px;
-
-  @include tablet {
-    .modal-dialog {
-      width: 600px;
-      margin: 30px auto;
-    }
   }
 }
 
@@ -75,6 +66,7 @@
   line-height: 1;
   color: #FFF;
   background: transparent;
+  outline: 0;
   cursor: pointer;
   -webkit-appearance: none;
 
@@ -95,4 +87,5 @@
 
 .modal-body {
   position: relative;
+  text-align: center;
 }

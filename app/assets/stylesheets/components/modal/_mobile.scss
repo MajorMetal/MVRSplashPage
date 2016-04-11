@@ -1,0 +1,14 @@
+@import 'components/modal/main';
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+
+  @include tablet {
+    .modal-dialog {
+      max-width: 600px;
+      margin: 30px auto;
+    }
+  }
+}

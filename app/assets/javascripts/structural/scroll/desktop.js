@@ -5,8 +5,11 @@ var scrollController = (function() {
   // jQuery variables.
   var $elements = $('.image--client');
   var $window   = $(window);
+  var navbar    = $('#nav');
 
-  var timer = 100;
+  // Regular variables.
+  var timer         = 100;
+  var navbarOffset  = navbar.offset().top;
   var reset;
 
   checkIfInView = function checkIfInView() {
@@ -30,6 +33,14 @@ var scrollController = (function() {
         timer += 200;
       };
     });
+
+    if ($window.scrollTop() >= ($window.height() - 48)) {
+      navbar.css('position', 'fixed');
+      navbar.css('top', '0');
+    } else {
+      navbar.css('position', '');
+      navbar.css('top', '');
+    };
   };
 
   $window.on('scroll', checkIfInView);

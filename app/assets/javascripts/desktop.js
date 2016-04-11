@@ -8,6 +8,7 @@
 //= require bootstrap/scrollspy
 //= require bootstrap/tab
 //= require bootstrap/carousel
+//= require bootstrap/modal
 //= require domEvents
 //= require structural/scroll/desktop
 //= require components/navbar/desktop
@@ -15,11 +16,13 @@
 //= require components/validation/validation
 //= require components/button/button
 //= require components/countdown/main
+//= require components/modal/imageModal
 
 DOMEvent.add(document, 'DOMContentLoaded', function() {
   scrollController();
   buttonController();
   navController();
   countdownController();
+  modalController();
   validationController();
 });

@@ -2,14 +2,16 @@
   position: relative;
   width: 100%;
   z-index: 50;
-}
 
-.video-filler {
-  height: 100vh;
-  height: calc(100vh - 48px);
-  width: 100%;
-  background-color: $gray-200;
-}
+  iframe {
+    height: 100vh;
+    height: calc(100vh - 48px);
+    width: 100%;
+    border: 0;
+    background-color: $gray-900;
+  }
+} // end '.header'
+
 
 .nav {
   position: absolute;
@@ -39,6 +41,7 @@
 
   p,
   a {
+    margin: 0;
     font-size: 14px;
     color: rgba(#FFF,.8);
     text-align: center;
@@ -50,10 +53,6 @@
       outline: none;
     }
   } // end '.nav p,a'
-
-  p {
-    margin: 0;
-  }
 
   a {
     text-decoration: none;
