@@ -5,7 +5,7 @@ class ContactMailer < ApplicationMailer
     @email    = email
     @message  = message
 
-    mail(from: email, to: ENV['SAM_EMAIL'], subject: 'New email from MonsterVR.com') do |format|
+    mail(from: email, subject: 'New email from MonsterVR.com') do |format|
       format.html
     end
 

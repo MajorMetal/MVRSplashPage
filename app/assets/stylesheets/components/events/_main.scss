@@ -82,10 +82,10 @@
   }
 
   &[aria-expanded='true']:after {
-    content: '\f106  Hide Details \f106';
+    content: '\f106  Show Less \f106';
   }
 
   &[aria-expanded='false']:after {
-    content: '\f107  Show Details \f107';
+    content: '\f107  Show More \f107';
   }
 } // end '.event__controls'

@@ -1,19 +1,19 @@
 .container.events#events{role: 'tablist', aria: {multiselectable: 'false'}}
   .row.event
-    .event__header#mixer-4{role: 'tab'}
+    .event__header#mixer-5{role: 'tab'}
       .col-6
-        %h3 Monster Mixer #4
-        %h6 April 11th, 2016
+        %h3 Monster Mixer #5
+        %h6 May 23rd, 2016
       .col-6
-        / %a.btn{href: '#events'} Buy Tickets
+        %a.btn{href: 'https://www.eventbrite.com/e/vr-mixer-multiplayer-vive-demos-interactive-gaming-experiences-food-drinks-fun-tickets-24248245154?aff=erellivmlt', target: '_blank'} Buy Tickets
 
-    .event__body.collapse#mixer-4-body{role: 'tabpanel', aria: {labelledby: 'mixer-4'}}
+    .event__body.collapse.in#mixer-5-body{role: 'tabpanel', aria: {labelledby: 'mixer-5'}}
       .col-6
         %h6 The Copper Door - 225 1/2 N. Broadway, Santa Ana, CA
-        %p.event__details Join us for the 4th Monster Monday on April 11th. Hello Monsters! Do you remember being in the classic Arcade as a kid? We are bringing it back with VR E-Sports.
+        %p.event__details Join us for the 5th Monster Monday on May 23rd. Hello Monsters! Do you remember being in the classic Arcade as a kid? We are bringing it back with VR E-Sports.
 
       .col-6.event__timer
-        .row#mixer-4-timer
+        .row#mixer-5-timer
           .col-3.col-offset-1
             %h1.days
           .col-3
@@ -30,4 +30,4 @@
           .col-3.col-offset-1
             %h6 Minutes
 
-    .event__controls{data: {toggle: 'collapse', parent: '#events', target: '#mixer-4-body'}, aria: {expanded: 'false', controls: 'mixer-4-body'}}
+    .event__controls{data: {toggle: 'collapse', parent: '#events', target: '#mixer-5-body'}, aria: {expanded: 'true', controls: 'mixer-5-body'}}
