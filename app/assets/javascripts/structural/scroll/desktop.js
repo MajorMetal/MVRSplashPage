@@ -30,7 +30,7 @@ var scrollController = (function() {
 
         reset = setTimeout(function() { timer = 100; }, timer);
 
-        timer += 200;
+        timer += 100;
       };
     });
 

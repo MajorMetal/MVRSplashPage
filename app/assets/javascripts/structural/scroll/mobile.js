@@ -5,18 +5,12 @@ var scrollController = (function() {
   // jQuery variables.
   var $elements = $('.image--client');
   var $body     = $('html, body');
-  var $main     = $('.main');
 
   // Regular variables.
   var timer = 100;
-  var scrollTop;
   var reset;
 
   checkIfInView = function checkIfInView() {
-    var scrollTop = Math.abs(
-      $main.offset().top - $main.css('margin-top').replace('px', '')
-    );
-
     $.each($elements, function() {
       var $element  = $(this);
       var offset    = $element.offset().top + 48;
@@ -35,15 +29,9 @@ var scrollController = (function() {
         timer += 100;
       };
     });
-
-    if (scrollTop > 50) {
-      $body.css('background-color', '#212121');
-    } else {
-      $body.css('background-color', '#FFF');
-    };
   };
 
-  $body.on('scroll', checkIfInView);
+  $(window).on('scroll', checkIfInView);
   DOMEvent.add(window, 'orientationchange', checkIfInView);
   DOMEvent.add(window, 'resize', checkIfInView);
 });

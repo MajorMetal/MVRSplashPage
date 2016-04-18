@@ -94,27 +94,15 @@ var navController = (function() {
 
   // Navbar button onfocus event handler.
   openSubMenu = function openSubMenu() {
-    var $this   = $(this);
-    var target  = $this.data('target');
-    var array   = $(".collapse.in:not(" + target + ")");
-
+    var $this = $(this);
     $this.toggleClass('focused');
-
-    $.each(array, function(index, element) {
-      $("[data-target='#" + element.id + "']").removeClass('focused');
-      $(element).collapse('hide');
-    });
-
-    setTimeout(function() {
-      $(".collapse" + target).collapse('toggle');
-    }, array.length ? 350 : 0);
-
+    $('#about-collapse').collapse('toggle');
   };
 
   // Navbar link onmouseup event handler.
   menuCloser = function menuCloser() {
     $("[data-target='#" + this.parentNode.parentNode.id + "']").removeClass('focused');
-    $(".collapse.in").collapse('hide');
+    $('#about-collapse').collapse('hide');
   };
 
 

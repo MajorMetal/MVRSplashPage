@@ -1,8 +1,15 @@
 @import 'components/form/main';
 
-.form .btn {
-  margin-top: 16px;
-  margin-bottom: 16px;
+.form {
+  .fa {
+    top: 3px;
+    font-size: 24px;
+  }
+
+  .btn {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
 }
 
 .input {
