@@ -35,4 +35,14 @@
     }
   } // end '.btn[disabled]'
 
+  &.btn-black {
+    font-family: inherit;
+    background-color: $gray-900;
+
+    &:before {
+      font: normal normal normal 14px/1 FontAwesome;
+      padding-right: 10px;
+    }
+  }
+
 } // end .btn
