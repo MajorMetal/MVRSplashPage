@@ -7,6 +7,12 @@
   }
 } // end '.container'
 
+.team {
+  [class*='col-'] {
+    text-align: center;
+  }
+}
+
 .vision {
   h2 {
     text-transform: uppercase;

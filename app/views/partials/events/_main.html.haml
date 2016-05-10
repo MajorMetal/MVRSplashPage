@@ -9,7 +9,7 @@
 
     .event__body.collapse.in#mixer-5-body{role: 'tabpanel', aria: {labelledby: 'mixer-5'}}
       .col-6
-        %h6 The Copper Door - 225 1/2 N. Broadway, Santa Ana, CA
+        %h6 The Copper Door - 225 1/2 N. Broadway, Santa Ana, CA 92701
         %p.event__details Join us for the 5th Monster Monday on May 23rd. Hello Monsters! Do you remember being in the classic Arcade as a kid? We are bringing it back with VR E-Sports.
 
       .col-6.event__timer
@@ -31,3 +31,35 @@
             %h6 Minutes
 
     .event__controls{data: {toggle: 'collapse', parent: '#events', target: '#mixer-5-body'}, aria: {expanded: 'true', controls: 'mixer-5-body'}}
+
+  .row.event
+    .event__header#socalvr{role: 'tab'}
+      .col-6
+        %h3 SoCal VR Conference
+        %h6 October 29th, 2016
+      .col-6
+        %a.btn{href: 'https://www.eventbrite.com/e/socal-vr-con-tickets-24975917642?aff=es2', target: '_blank'} Buy Tickets
+
+    .event__body.collapse#socalvr-body{role: 'tabpanel', aria: {labelledby: 'socalvr'}}
+      .col-6
+        %h6 Long Beach Convention Center - 300 E Ocean Blvd, Long Beach, CA 90802
+
+      .col-6.event__timer
+        .row#socalvr-timer
+          .col-3.col-offset-1
+            %h1.days
+          .col-3
+            %h1.hours
+          .col-1
+            %h1 :
+          .col-3
+            %h1.minutes
+        .row
+          .col-3.col-offset-1
+            %h6 Days
+          .col-3
+            %h6 Hours
+          .col-3.col-offset-1
+            %h6 Minutes
+
+    .event__controls{data: {toggle: 'collapse', parent: '#events', target: '#socalvr-body'}, aria: {expanded: 'false', controls: 'socalvr-body'}}

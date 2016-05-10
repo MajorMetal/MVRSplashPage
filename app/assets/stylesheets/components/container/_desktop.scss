@@ -18,6 +18,13 @@
 } // end '.container'
 
 
+.team {
+  [class*='col-'] {
+    text-align: center;
+  }
+}
+
+
 .vision {
   h1 {
     text-transform: uppercase;
