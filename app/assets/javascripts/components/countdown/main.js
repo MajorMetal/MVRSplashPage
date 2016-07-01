@@ -1,6 +1,6 @@
 var countdownController = function() {
 
-  $('#mixer-7-timer').countdown('06/20/2016 8:00 PM', function(event) {
+  $('#mixer-8-timer').countdown('07/25/2016 8:00 PM', function(event) {
     var days    = this.querySelector('.days');
     var hours   = this.querySelector('.hours');
     var minutes = this.querySelector('.minutes');
