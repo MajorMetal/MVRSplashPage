@@ -2,14 +2,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.countdown
-//= require bootstrap/transition
-//= require bootstrap/collapse
-//= require bootstrap/scrollspy
-//= require bootstrap/tab
-//= require bootstrap/carousel
-//= require bootstrap/modal
-//= require domEvents
+//= require jquery.countdown.min
+//= require bootstrap.min
 //= require structural/scroll/desktop
 //= require components/navbar/desktop
 //= require components/timeline/desktop

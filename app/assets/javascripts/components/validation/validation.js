@@ -18,7 +18,7 @@ var validationController = (function() {
   // Adds a label to the element
   addLabel = function addLabel(element, klass) {
     var label = document.createElement('i');
-    
+
     removeLabel(element);
 
     label.className = klass;

@@ -1,21 +1,42 @@
-class MainController < ApplicationController
+# =========================
+# Routes
+# =========================
+#    root GET  /                  main#home
+# contact POST /contact(.:format) main#contact
 
-  def contact
-    send_mailer if valid_info
-    redirect_to root_path
+
+class MainController < ApplicationController
+  # Internal: Checks for mobile device.
+  before_filter :check_for_mobile, only: [:home]
+  # Internal: Builds contact email object.
+  before_action :build_email
+
+
+  # Public: Renders home page.
+  #
+  # Renders home page.
+  def home
   end
 
-  private
-    def valid_info
-      ValidateInfo.new({
-        name:     params[:name],
-        email:    params[:email],
-        message:  params[:message]
-      }).valid?
+  # Public: Sends contact email.
+  #
+  # Redirects to home page.
+  def contact
+    if @email.sent?
+      redirect_to root_path, success: "Email sent"
+    else
+      render :home
     end
+  end
 
-    def send_mailer
-      ContactMailer.send_mail(params[:name], params[:email], params[:message]).deliver_now
-    end
+
+  private
+
+  # Internal: Builds new contact email object.
+  #
+  # Returns worker.
+  def build_email
+    @email = ContactEmail.new(params[:email])
+  end
 
 end

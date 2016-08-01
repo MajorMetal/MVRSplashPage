@@ -2,12 +2,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.touchSwipe
-//= require bootstrap/transition
-//= require bootstrap/collapse
-//= require bootstrap/carousel
-//= require bootstrap/modal
-//= require domEvents
+//= require jquery.touchSwipe.min
+//= require bootstrap.min
 //= require structural/scroll/mobile
 //= require structural/swipe/main
 //= require components/navbar/mobile

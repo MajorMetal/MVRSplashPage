@@ -1,13 +1,14 @@
 class ContactMailer < ApplicationMailer
 
-  def send_mail(name, email, message)
-    @name     = name
-    @email    = email
-    @message  = message
+  # Public: Builds contact email.
+  #
+  # Returns nothing.
+  def build(details)
+    @details = details
 
-    mail(from: email, subject: 'New email from MonsterVR.com') do |format|
+    mail(from: details.email, subject: "New email from MonsterVR.com") do |format|
       format.html
     end
-
   end
+
 end

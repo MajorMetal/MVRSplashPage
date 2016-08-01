@@ -4,6 +4,15 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+.DS_Store
+.DS_Store?
+*.sw?
+._*
+.rspec
+
+# Ignore test coverage
+/coverage
+
 # Ignore bundler config.
 /.bundle
 
@@ -14,6 +23,3 @@
 
 # Ignore application configuration
 /config/application.yml
-
-# Ignore test coverage
-/coverage

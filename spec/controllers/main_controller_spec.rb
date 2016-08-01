@@ -1,40 +1,59 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe MainController do
-  # =========================
-  #     Home Page Tests
-  # =========================
-  describe 'GET #home' do
-    it 'renders the home template' do
+  describe "GET #home" do
+    it "renders the home template" do
       get :home
       expect(response).to have_http_status(200)
       expect(response).to render_template(:home)
     end
+
+    it "assigns the email object" do
+      get :home
+      expect(assigns(:email)).to be_a_new(ContactEmail)
+    end
   end
 
 
-  # =========================
-  #    Contact Page Tests
-  # =========================
-  describe 'POST #contact' do
-    let(:params) {{name: 'Sam', email: 'sam@test.com', message: 'message'}}
+  describe "POST #contact" do
+    context "with invalid attributes" do
+      let(:params) {
+        { email: {
+          name: "Example",
+          email: "example@test",
+          message: "message",
+        }}
+      }
 
-    context 'with valid attributes' do
-      it 'sends an email' do
-        expect{post :contact, params}.to change{ActionMailer::Base.deliveries.count}.by(1)
+      it "does not send an email" do
+        expect{ post :contact, params }
+          .to change{ ActionMailer::Base.deliveries.count }.by(0)
+      end
+
+      it "renders form" do
+        post :contact, params
+        expect(response).to render_template(:home)
       end
     end
 
-    context 'with invalid attributes' do
-      it 'does not send an email' do
-        expect{post :contact}.to change{ActionMailer::Base.deliveries.count}.by(0)
+    context "with valid attributes" do
+      let(:params) {
+        { email: {
+          name: "Example",
+          email: "example@test.com",
+          message: "message",
+        }}
+      }
+
+      it "sends an email" do
+        expect{ post :contact, params }
+          .to change{ ActionMailer::Base.deliveries.count }.by(1)
+      end
+
+      it "redirects to home page" do
+        post :contact, params
+        expect(response).to redirect_to(root_path)
       end
     end
-
-    it 'redirects to home page' do
-      post :contact
-      expect(response).to redirect_to(root_path)
-    end
-
   end
 end

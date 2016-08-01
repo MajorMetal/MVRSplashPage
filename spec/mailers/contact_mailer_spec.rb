@@ -1,32 +1,41 @@
-require 'rails_helper'
+require "rails_helper"
+
 
 RSpec.describe ContactMailer do
-  describe 'send_mail' do
-    let(:mail) {ContactMailer.send_mail('Sam', 'sam@test.com', 'message')}
+  describe "build" do
+    let(:details) {
+      ContactEmail.new({
+        name: "Example",
+        email: "example@test.com",
+        message: "message",
+      })
+    }
+    let(:mail) { ContactMailer.build(details) }
 
-    it 'renders the sender email' do
-      expect(mail.from).to eql(['sam@test.com'])
+
+    it "renders the sender email" do
+      expect(mail.from).to eql([details.email])
     end
 
-    it 'renders the receiver email' do
-      expect(mail.to).to eql([ENV['SAM_EMAIL']])
+    it "renders the receiver email" do
+      expect(mail.to).to eql([ENV["DEFAULT_EMAIL"]])
     end
 
-    it 'renders the subject' do
-      expect(mail.subject).to eql('New email from MonsterVR.com')
+    it "renders the subject" do
+      expect(mail.subject).to eql("New email from MonsterVR.com")
     end
 
-    it 'assigns @name' do
-      expect(mail.body.encoded).to match('Sam')
+    it "renders name" do
+      expect(mail.body.encoded).to match(details.name)
     end
 
-    it 'assigns @email' do
-      expect(mail.body.encoded).to match('sam@test.com')
+    it "renders email" do
+      expect(mail.body.encoded).to match(details.email)
     end
 
-    it 'assigns @message' do
-      expect(mail.body.encoded).to match('message')
+    it "renders message" do
+      expect(mail.body.encoded).to match(details.message)
     end
+
   end
-
 end
