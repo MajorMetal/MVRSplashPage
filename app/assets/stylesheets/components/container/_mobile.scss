@@ -1,51 +1,27 @@
+.main {
+  position: relative;
+  left: 0;
+  max-width: $width-md-cutoff;
+  background-color: #fff;
+  z-index: 25;
+  @include transition(left 0.3s cubic-bezier(0.4, 0, 0.2, 1));
+
+  &.nav__open {
+    left: 16em;
+  }
+}
+
 .container {
-  margin: 16px 0;
-  padding: 8px 16px;
+  margin: 1em 0;
+  padding: 0 1em;
 
   &:last-child {
     margin-bottom: 0;
   }
-} // end '.container'
+}
 
 .team {
   [class*='col-'] {
     text-align: center;
   }
 }
-
-.vision {
-  h2 {
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 900;
-  }
-
-  span {
-    color: $light-green-500;
-  }
-
-  p {
-    width: 90%;
-    max-width: 400px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  @include tablet {
-    h2 {
-      line-height: 126px;
-      font-size: 112px;
-      font-weight: 300;
-      letter-spacing: -4px;
-    }
-
-    span {
-      display: block;
-    }
-
-    p:first-child {
-      margin-top: 15px;
-    }
-  } // end tablet
-
-} // end '.vision'

@@ -8,11 +8,11 @@ var validationController = (function() {
   var formHandler;
 
   // Regular variables.
-  var form          = document.querySelector('.form');
-  var button        = form.querySelector("button[type='submit']");
-  var nameInput     = document.getElementById('contact_name');
-  var emailInput    = document.getElementById('contact_email');
-  var messageInput  = document.getElementById('contact_message');
+  var $form = $('.form');
+  var button = document.querySelector("button[type='submit']");
+  var nameInput = document.getElementById('contact_name');
+  var emailInput = document.getElementById('contact_email');
+  var messageInput = document.getElementById('contact_message');
 
 
   // Adds a label to the element
@@ -82,7 +82,7 @@ var validationController = (function() {
   };
 
   // Event Listener.
-  DOMEvent.add(form, 'change', formHandler);
+  $form.on('change', formHandler);
 
   validateButton();
 });

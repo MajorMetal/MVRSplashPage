@@ -1,9 +1,46 @@
-/*
-  * This is a manifest file that'll be compiled into desktop.css, which will include all the files listed below.
-*/
+// This is a manifest file that'll be compiled into desktop.css, which will
+// include all the files listed below.
 
-@import 'normalize.min';
-@import 'font-awesome';
-@import 'helpers/main';
-@import 'structural/desktop';
-@import 'components/desktop';
+
+// =========================
+// Vendor
+// =========================
+@import "normalize.min";
+@import "font-awesome";
+
+// =========================
+// Helpers
+// =========================
+@import "helpers/fonts";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/animations";
+@import "helpers/classes";
+
+// =========================
+// Structural
+// =========================
+@import "structural/grid";
+@import "structural/page";
+@import "structural/typography";
+
+// =========================
+// Components
+// =========================
+@import "components/button";
+@import "components/carousel/main";
+@import "components/container/desktop";
+@import "components/embed";
+@import "components/footer";
+@import "components/form/main";
+@import "components/image/desktop";
+@import "components/modal/desktop";
+@import "components/navbar/desktop";
+
+// =========================
+// Sections
+// =========================
+@import "sections/events/main";
+@import "sections/projects/main";
+@import "sections/timeline/desktop";
+@import "sections/vision";

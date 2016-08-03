@@ -1,10 +1,46 @@
-/*
-  * This is a manifest file that'll be compiled into mobile.css, which will include all the files listed below.
-*/
+// This is a manifest file that'll be compiled into mobile.css, which will
+// include all the files listed below.
 
-@import 'normalize.min';
-@import 'font-awesome';
-@import 'helpers/main';
-@import 'structural/mobile';
-@import 'components/mobile';
 
+// =========================
+// Vendor
+// =========================
+@import "normalize.min";
+@import "font-awesome";
+
+// =========================
+// Helpers
+// =========================
+@import "helpers/fonts";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/animations";
+@import "helpers/classes";
+
+// =========================
+// Structural
+// =========================
+@import "structural/grid";
+@import "structural/typography";
+@import "structural/page";
+
+// =========================
+// Components
+// =========================
+@import "components/button";
+@import "components/carousel/mobile";
+@import "components/container/mobile";
+@import "components/embed";
+@import "components/image/mobile";
+@import "components/modal/mobile";
+
+// =========================
+// Sections
+// =========================
+@import "sections/events/mobile";
+@import "sections/footer";
+@import "sections/form/mobile";
+@import "sections/projects/mobile";
+@import "sections/timeline/mobile";
+@import "sections/vision";
+@import "sections/navbar/mobile";

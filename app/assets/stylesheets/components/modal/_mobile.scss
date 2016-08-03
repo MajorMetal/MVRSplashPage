@@ -5,7 +5,7 @@
   width: auto;
   margin: 10px;
 
-  @include tablet {
+  @include screen-md {
     .modal-dialog {
       max-width: 600px;
       margin: 30px auto;

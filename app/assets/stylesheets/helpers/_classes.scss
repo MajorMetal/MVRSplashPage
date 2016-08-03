@@ -1,6 +1,6 @@
-/*=========================
-        Clearfix
-=========================*/
+// =========================
+// Clearfix
+// =========================
 .clearfix:before,
 .clearfix:after,
 .navbar:before,
@@ -12,7 +12,7 @@
 .footer:before,
 .footer:after {
   display: table;
-  content: ' ';
+  content: " ";
 }
 
 .clearfix:after,
@@ -24,96 +24,79 @@
 }
 
 
-/*=========================
-      Screen Reader
-=========================*/
+// =========================
+// Screen Reader
+// =========================
 .sr {
   position: absolute;
   height: 1px;
   width: 1px;
-  margin: -1px;
   border: 0;
+  margin: -1px;
   padding: 0;
   overflow: hidden;
 }
 
 
-/*=========================
-      Font-Awesome
-=========================*/
-.fa-fw {
-  height: 48px;
-  width: 48px;
-  text-align: center;
-  line-height: 48px;
-}
-
-
-/*=========================
-        Bootstrap
-=========================*/
+// =========================
+// Bootstrap JS
+// =========================
 .collapse {
   display: none;
 
   &.in {
     display: block;
   }
-} // end '.collapse'
+}
 
 .collapsing {
   position: relative;
   height: 0;
   overflow: hidden;
-  @include transition(height .35s ease, visibility .35s ease);
+  @include transition(height 0.35s ease, visibility 0.35s ease);
 }
 
 
-/*=========================
-           Other
-=========================*/
+// =========================
+// Button Click Animation Ripple
+// =========================
 .ripple {
   position: absolute;
   border-radius: 50%;
   opacity: 0;
-  @include transform(scale(0,0));
-  @include animation(buttonClick .7s);
+  @include transform(scale(0, 0));
+  @include animation(buttonClick 0.7s);
 }
 
+
+// =========================
+// Navbar Hamburger Menu
+// =========================
 .hamburger {
-  top: 26px;
-  left: 16px;
-
-  @include landscape {
-    top: 22px;
-    left: 14px;
-  }
-
-  @include tablet {
-    top: 30px;
-    left: 18px;
-  }
+  left: 0.625em;
+  top: 1.5em;
 
   &,
   &:before,
   &:after {
-    position: absolute;
     display: block;
+    position: absolute;
     height: 3px;
     width: 24px;
     background-color: #000;
-    @include transition(all .3s cubic-bezier(.4,0,.2,1));
+    @include transition(all 0.3s cubic-bezier(0.4, 0, 0.2, 1));
   }
 
   &:before,
   &:after {
-    content: '';
+    content: "";
   }
 
   &:before {
-    top: -6px;
+    top: -0.375em;
   }
 
   &:after {
-    top: 6px;
+    top: 0.375em;
   }
-} // end '.hamburger'
+}

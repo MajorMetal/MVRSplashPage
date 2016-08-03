@@ -1,0 +1,36 @@
+.vision {
+  h1,
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+  }
+
+  h2 {
+    margin-bottom: 0.5em;
+  }
+
+  span {
+    color: $light-green-500;
+  }
+
+  p {
+    max-width: 25em;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include screen-md {
+    h2 {
+      line-height: 1.125;
+      font-size: 7em;
+      font-weight: 300;
+      letter-spacing: -0.035em;
+      margin-bottom: 0;
+    }
+
+    span {
+      display: block;
+    }
+  }
+}

@@ -27,18 +27,18 @@ var buttonController = (function() {
   // Navbar button/link onmousedown event handler.
   rippleCreation = function rippleCreation(event) {
     if (!mouseClicked) {
-      var _this   = this;
-      var ripple  = createClickRipple(
-                      event.offsetY,
-                      event.offsetX,
-                      (_this.clientHeight + _this.clientWidth)
-                    );
+      var self = this;
+      var ripple = createClickRipple(
+        event.offsetY,
+        event.offsetX,
+        (self.clientHeight + self.clientWidth)
+      );
 
       mouseClicked = true;
-      _this.appendChild(ripple);
+      self.appendChild(ripple);
 
       setTimeout(function() {
-        _this.removeChild(ripple);
+        self.removeChild(ripple);
         mouseClicked = false;
       }, 700);
     };
@@ -46,6 +46,6 @@ var buttonController = (function() {
 
   // Event Listeners.
   for (var i = 0; i < buttons.length; i++) {
-    DOMEvent.add(buttons[i], 'mousedown', rippleCreation);
+    $(buttons[i]).on('mousedown', rippleCreation);
   };
 });

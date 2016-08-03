@@ -1,107 +1,72 @@
 var navController = (function() {
-  // Function variables.
-  var createClickRipple;
-  var rippleCreation;
-  var clickHandler;
-  var menuCloser;
-  var menuToggle;
-
-  // DOM Element variables.
-  var main          = document.getElementById('main');
-  var header        = document.getElementById('header');
-  var footer        = document.getElementById('footer');
-  var navToggle     = document.getElementById('nav-toggle');
-  var nav           = document.getElementById('nav');
-  var navButtons    = nav.querySelectorAll('p');
-  var navLinks      = nav.querySelectorAll('a');
-
-  // Regular variables.
+  var $main = $('#main');
+  var $nav = $('#nav');
+  var $navToggle = $('#nav-toggle');
+  var $navLinks = $nav.find('a');
   var mouseClicked;
 
-  // Converts jQuery array search to boolean.
-  includes = function includes(element, collection) {
-    return $.inArray(element, collection) > -1;
-  };
 
-  // Builds the ripple element for onclick event.
-  createClickRipple = function createClickRipple(yPos, xPos, width) {
+  function includes(element, collection) {
+    return $.inArray(element, collection) > -1;
+  }
+
+  function createClickRipple(yPos, xPos, width) {
     var element = document.createElement('span');
 
-    element.className             = 'ripple';
-    element.style.top             = (yPos - (width / 2)) + 'px';
-    element.style.left            = (xPos - (width / 2)) + 'px';
-    element.style.height          = width + 'px';
-    element.style.width           = width + 'px';
+    element.className = 'ripple';
+    element.style.top = (yPos - (width / 2)) + 'px';
+    element.style.left = (xPos - (width / 2)) + 'px';
+    element.style.height = width + 'px';
+    element.style.width = width + 'px';
     element.style.backgroundColor = '#616161';
 
     return element;
-  };
+  }
 
-  // Navbar button/link onmousedown event handler.
-  rippleCreation = function rippleCreation(event) {
-    if (!mouseClicked) {
-      var target  = event.target;
-      var ripple  = createClickRipple(
-                      event.offsetY,
-                      event.offsetX,
-                      (target.clientHeight + target.clientWidth)
-                    );
+  function rippleCreation(event) {
+    if (mouseClicked) return;
 
-      mouseClicked = true;
-      target.appendChild(ripple);
+    var target = event.target;
+    var ripple = createClickRipple(
+      event.offsetY,
+      event.offsetX,
+      (target.clientHeight + target.clientWidth)
+    );
 
-      setTimeout(function() {
-        target.removeChild(ripple);
-        mouseClicked = false;
-      }, 700);
-    }
-  };
+    mouseClicked = true;
 
-  clickHandler = function clickHandler(event) {
-    if (includes(event.target, navLinks) || includes(event.target, navButtons)) {
-      var target  = $(event.target.hash);
+    target.appendChild(ripple);
+    setTimeout(function() {
+      target.removeChild(ripple);
+      mouseClicked = false;
+    }, 700);
+  }
 
-      rippleCreation(event);
-      
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top - $(header).height()
-        }, 750);
-      };
+  function rippleAnimator(event) {
+    if (!includes(event.target, $navLinks)) return;
 
-    };
-  };
+    rippleCreation(event);
+  }
 
-  // Navbar link onmouseup event handler.
-  menuCloser = function menuCloser() {
-    navToggle.checked = !navToggle.checked;
-    DOMEvent.trigger(navToggle, 'change');
-  };
+  function menuCloser(event) {
+    if (!includes(event.target, $navLinks)) return;
 
-  // Navbar toggle onchange event handler.
-  menuToggle = function menuToggle() {
-    if (this.checked) {
-      nav.className     = 'nav nav--open';
-      header.className  = 'header nav--open';
-      main.className    = 'main nav--open';
-      footer.className  = 'footer nav--open';
+    $navToggle.prop('checked', false);
+    menuToggler({ target: $navToggle[0] });
+  }
+
+  function menuToggler(event) {
+    if (event.target.checked) {
+      $main.addClass('nav__open');
+      $nav.addClass('nav__open');
     } else {
-      nav.className     = 'nav';
-      header.className  = 'header';
-      main.className    = 'main';
-      footer.className  = 'footer';
-    };
-  };
+      $main.removeClass('nav__open');
+      $nav.removeClass('nav__open');
+    }
+  }
 
 
-// =========================
-//      Event Listeners
-// =========================
-  DOMEvent.add(nav, 'mousedown', clickHandler);
-
-  for (var i = 0; i < navLinks.length; i++) {
-    DOMEvent.add(navLinks[i], 'mouseup', menuCloser);
-  };
-
-  DOMEvent.add(navToggle, 'change', menuToggle);
+  $nav.on('mousedown', rippleAnimator);
+  $nav.on('mouseup', menuCloser);
+  $navToggle.on('change', menuToggler);
 });

@@ -12,7 +12,7 @@
 //= require components/countdown/main
 //= require components/modal/imageModal
 
-DOMEvent.add(document, 'DOMContentLoaded', function() {
+$(function() {
   scrollController();
   buttonController();
   navController();

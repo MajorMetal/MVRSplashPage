@@ -1,0 +1,17 @@
+.embed {
+  display: block;
+  position: relative;
+  height: 0;
+  padding: 0 0 56.25%;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+}

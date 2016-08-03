@@ -1,16 +1,13 @@
 class ContactEmail
   # Internal: Includes ActiveModel Validation callbacks.
-  include ActiveModel::Validations
+  include ActiveModel::Model
 
   # Public: Instantiates class attributes.
-  attr_accessor :name
-  attr_accessor :email
-  attr_accessor :message
+  attr_accessor :name, :message, :email
 
   # Internal: Defines validations for attributes.
-  validates :name, presence: true
+  validates :name, :message, presence: true
   validates :email, email: true
-  validates :message, presence: true
 
 
   # Public: Initialize Service.

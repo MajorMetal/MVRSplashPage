@@ -1,0 +1,41 @@
+.container#projects{role: "tablist"}
+  .projects
+    .clearfix#vr-projects{role: "tab"}
+      .col-sm-2
+        %h6 Virtual Reality
+      .col-sm-2
+        %a.btn{href: "#vr-projects-content", role: "button",
+                data: {toggle: "collapse", parent: "#projects"},
+                aria: {expanded: "false", controls: "vr-projects-content"}} Learn More
+      .col-sm-4
+        = render "partials/projects/sections/vr_projects_carousel"
+
+    .clearfix#events-projects{role: "tab"}
+      .col-sm-2
+        %h6 Past Events
+      .col-sm-2
+        %a.btn{href: "#events-projects-content", role: "button",
+                data: {toggle: "collapse", parent: "#projects"},
+                aria: {expanded: "false", controls: "events-projects-content"}} Learn More
+      .col-sm-4
+        = render "partials/projects/sections/events_projects_carousel"
+
+    .clearfix#videos-projects{role: "tab"}
+      .col-sm-2
+        %h6 360 Videos
+      .col-sm-2
+        %a.btn{href: "#videos-projects-content", role: "button",
+                data: {toggle: "collapse", parent: "#projects"},
+                aria: {expanded: "false", controls: "videos-projects-content"}} Learn More
+      .col-sm-4
+        = render "partials/projects/sections/videos_projects_carousel"
+
+    .clearfix#consultation-projects{role: "tab"}
+      .col-sm-2
+        %h6 Consultation
+      .col-sm-2
+        %a.btn{href: "#consultation-projects-content", role: "button",
+                data: {toggle: "collapse", parent: "#projects"},
+                aria: {expanded: "false", controls: "consultation-projects-content"}} Learn More
+      .col-sm-4
+        = render "partials/projects/sections/consultation_projects_carousel"

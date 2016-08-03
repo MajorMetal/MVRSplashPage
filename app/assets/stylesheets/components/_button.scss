@@ -1,0 +1,47 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  min-width: 10em;
+  padding: 0.75em 1.5em;
+  border: 0;
+  border-radius: 0.188em;
+  color: rgba(#fff, 0.8);
+  background-color: $light-green-500;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  @include touch-action(manipulation);
+  @include user-select(none);
+
+  &.btn__sml {
+    padding: 0.375em 0.75em;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    background-color: $light-green-700;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.65;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $light-green-500;
+    }
+  }
+
+  &.btn__black {
+    font-family: inherit;
+    background-color: $gray-900;
+
+    &:before {
+      font: normal normal normal 14px/1 FontAwesome;
+      padding-right: 0.5em;
+    }
+  }
+}

@@ -22,34 +22,7 @@
   [class*='col-'] {
     text-align: center;
   }
-}
 
-
-.vision {
-  h1 {
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 900;
-
-    span {
-      display: block;
-      color: $light-green-500;
-    }
-  }
-
-  p {
-    max-width: 400px;
-    margin-right: auto;
-    margin-left: auto;
-
-    &:first-child {
-      margin-top: 15px;
-    }
-  }
-} // end '.vision'
-
-
-.team {
   & > :last-child {
     margin-top: 24px;
   }

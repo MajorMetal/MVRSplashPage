@@ -5,14 +5,14 @@
 //= require jquery.touchSwipe.min
 //= require bootstrap.min
 //= require structural/scroll/mobile
-//= require structural/swipe/main
+//= require structural/swipe
 //= require components/navbar/mobile
 //= require components/timeline/mobile
 //= require components/validation/validation
 //= require components/button/button
 //= require components/modal/imageModal
 
-DOMEvent.add(document, 'DOMContentLoaded', function() {
+$(function() {
   scrollController();
   swipeController();
   buttonController();

@@ -54,9 +54,9 @@ jQuery(document).ready(function($) {
     value = value > 0 ? 0 : value;
     // Do not translate more than timeline width.
     value = (!(typeof totalWidth === 'undefined') &&  value < totalWidth) ? totalWidth : value;
-    
+
     setTransformValue(eventsCont, 'translateX', value + 'px');
-    
+
     // Update navigation arrows visibility.
     if (!value) {
       components.navigation.find('.prev').addClass('inactive');
@@ -140,7 +140,7 @@ jQuery(document).ready(function($) {
     };
 
     selectedContent.attr('class', classEnetering);
-    
+
     visibleContent.attr('class', classLeaving).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
       visibleContent.removeClass('leave-right leave-left');
       selectedContent.removeClass('enter-left enter-right');
@@ -175,7 +175,7 @@ jQuery(document).ready(function($) {
       } else {
         selectedDate.parent('li').prev('li').children('a');
       };
-      
+
       updateFilling(newEvent, components.fillingLine, timelineTotWidth);
       updateVisibleContent(newEvent, components.content);
 
@@ -207,7 +207,7 @@ jQuery(document).ready(function($) {
     // Retrieve translateX value of components.eventsList.
     var translateValue  = getTranslateValue(components.eventsList);
     var wrapperWidth    = Number(components.eventsContainer.css('width').replace('px', ''));
-    
+
     // Translate the timeline to the left('next')/right('prev') .
     if (string === 'next') {
       translateTimeline(
@@ -228,7 +228,7 @@ jQuery(document).ready(function($) {
     components.eventsList.css('width', totalWidth + 'px');
     updateFilling(components.eventsList.find('a.selected'), components.fillingLine, totalWidth);
     updateTimelinePosition('next', components.eventsList.find('a.selected'), components);
-  
+
     return totalWidth;
   };
 
@@ -256,7 +256,7 @@ jQuery(document).ready(function($) {
     // Determine the minimum distance among events.
     var dateDistances = [];
 
-    for (i = 1; i < dates.length; i++) { 
+    for (i = 1; i < dates.length; i++) {
       var distance = dayDiff(dates[i - 1], dates[i]);
 
       dateDistances.push(distance);
@@ -344,7 +344,7 @@ jQuery(document).ready(function($) {
 
         components.events.removeClass('selected');
         $this.addClass('selected');
-        
+
         updateOlderEvents($this);
         updateFilling($this, components.fillingLine, timelineTotalWidth);
         updateVisibleContent($this, components.content);

@@ -4,7 +4,7 @@ var scrollController = (function() {
 
   // jQuery variables.
   var $elements = $('.image--client');
-  var $body     = $('html, body');
+  var $body = $('html, body');
 
   // Regular variables.
   var timer = 100;
@@ -12,12 +12,12 @@ var scrollController = (function() {
 
   checkIfInView = function checkIfInView() {
     $.each($elements, function() {
-      var $element  = $(this);
-      var offset    = $element.offset().top + 48;
+      var $element = $(this);
+      var offset = $element.offset().top + 48;
 
       if (offset <= $body.height() && !$element.data('triggered')) {
         $element.data('triggered', true)
-        
+
         setTimeout(function() {
           $element.removeClass('hidden');
         }, timer);
@@ -31,7 +31,5 @@ var scrollController = (function() {
     });
   };
 
-  $(window).on('scroll', checkIfInView);
-  DOMEvent.add(window, 'orientationchange', checkIfInView);
-  DOMEvent.add(window, 'resize', checkIfInView);
+  $(window).on('scroll resize orientationchange', checkIfInView);
 });

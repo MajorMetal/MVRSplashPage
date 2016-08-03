@@ -1,46 +1,22 @@
-/*=========================
-    Media Query Mixins
-=========================*/
-@mixin phone {
-  @media screen and (max-width:($width-xs-cutoff - 1px)) {
+// =========================
+// Media Query Sizes
+// =========================
+@mixin screen-md {
+  @media screen and (min-width: $width-sm-cutoff) {
     @content;
   }
 }
 
-@mixin landscape {
-  @media screen and (max-width:($width-xs-cutoff - 1px)) and (orientation:landscape) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media screen and (min-width:$width-xs-cutoff) {
-    @content;
-  }
-}
-
-@mixin handheld {
-  @media screen and (max-width:($width-sm-cutoff - 1px)) {
-    @content;
-  }
-}
-
-@mixin desktop-sm {
-  @media screen and (min-width:$width-sm-cutoff) {
-    @content;
-  }
-}
-
-@mixin desktop-lg {
-  @media screen and (min-width:$width-md-cutoff) {
+@mixin screen-lg {
+  @media screen and (min-width: $width-md-cutoff) {
     @content;
   }
 }
 
 
-/*=========================
-      Modifier Mixins
-=========================*/
+// =========================
+// Modifier Mixins
+// =========================
 @mixin box-sizing($sizing...) {
   -webkit-box-sizing: $sizing;
      -moz-box-sizing: $sizing;
@@ -138,9 +114,9 @@
 }
 
 
-/*=========================
-     Animation Setup
-=========================*/
+// =========================
+// Animation Setup
+// =========================
 @mixin animation-setup($name) {
   @-webkit-keyframes #{$name} {
     @content;
@@ -152,30 +128,29 @@
 }
 
 
-/*=========================
-        Grid System
-=========================*/
-@mixin build-columns($size, $columns) {
+// =========================
+// Grid System Setup
+// =========================
+@mixin build-columns($size, $columns: 12) {
   @for $i from $columns through 0 {
     $width: (100% / $columns) * $i;
 
     @if $i > 0 {
-      .col#{$size}-#{$i} {
+      .col__#{$size}-#{$i} {
         width: $width;
       }
     }
 
-    .col#{$size}-offset-#{$i} {
+    .col__#{$size}-offset-#{$i} {
       margin-left: $width;
     }
 
-    .col#{$size}-pull-#{$i} {
+    .col__#{$size}-pull-#{$i} {
       right: $width;
     }
 
-    .col#{$size}-push-#{$i} {
+    .col__#{$size}-push-#{$i} {
       left: $width;
     }
-  } // end for loop
-
-} // end 'build-columns'
+  }
+}

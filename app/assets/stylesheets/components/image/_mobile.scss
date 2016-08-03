@@ -69,7 +69,7 @@ img {
     }
   } // end '.image--team:hover'
 
-  @include tablet {
+  @include screen-md {
     margin-bottom: 16px;
   }
 

@@ -1,0 +1,30 @@
+.collapse#videos-projects-content{role: "tabpanel", aria: {labelledby: "videos-projects"}}
+  .carousel.slide#videos-projects-carousel{data: {ride: "carousel", interval: "false"}}
+    %a.left.carousel-control{href: "#videos-projects-carousel", role: "button", data: {slide: "prev"}}
+      %span.fa.fa-chevron-left{aria: {hidden: "true"}}
+      %span.sr Previous
+
+    %a.right.carousel-control{href: "#videos-projects-carousel", role: "button", data: {slide: "next"}}
+      %span.fa.fa-chevron-right{aria: {hidden: "true"}}
+      %span.sr Next
+
+    %ul.carousel-indicators
+      %li.active{data: {target: "#videos-projects-carousel", slide: {to: "0"}}}
+      %li{data: {target: "#videos-projects-carousel", slide: {to: "1"}}}
+
+    .carousel-inner{role: "listbox"}
+      .item.active
+        .col-sm-4
+          %h4 San Diego Zoo
+
+          %img{src: asset_path("sdzoo-1.jpg"), data: {toggle: "modal", target: "#image-modal"}}
+          %a.btn{href: "https://www.youtube.com/watch?v=XZe6Cbh5CYo&feature=youtu.be", target: "_blank"} Watch 360 Video
+          %p This was a 360 video produced for San Diego’s tech to reconnect program. Designed to use creative technologies to gain empathy for the animals by literally seeing through the eyes of the animal. This was in conjunction with a San Diego Zoo branded google cardboard to hand out as one complete package.
+
+      .item
+        .col-sm-4
+          %h4 Vlog Kill
+
+          %img{src: asset_path("vlog-kill-1.jpg"), data: {toggle: "modal", target: "#image-modal"}}
+          %a.btn{href: "https://www.youtube.com/watch?time_continue=59&v=Zy4VVV6TGd0", target: "_blank"} Watch 360 Video
+          %p This is our entry into the indie Milk VR competition. Gone in 60 seconds, focused on taking you somewhere in 60 seconds. We decided to push the boundaries and see if we can add in an abstract theme with a unique spin. Our experiences called "Laguna Beach" is like if Memento met American Psycho and then they fought to the death... In 60 seconds.
