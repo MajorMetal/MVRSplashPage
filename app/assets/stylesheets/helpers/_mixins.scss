@@ -17,10 +17,64 @@
 // =========================
 // Modifier Mixins
 // =========================
-@mixin box-sizing($sizing...) {
-  -webkit-box-sizing: $sizing;
-     -moz-box-sizing: $sizing;
-          box-sizing: $sizing;
+@mixin animation($animation...) {
+  -webkit-animation: $animation;
+          animation: $animation;
+}
+
+@mixin animation-direction($direction...) {
+  -webkit-animation-direction: $direction;
+     -moz-animation-direction: $direction;
+          animation-direction: $direction;
+}
+
+@mixin animation-duration($duration...) {
+  -webkit-animation-duration: $duration;
+     -moz-animation-duration: $duration;
+          animation-duration: $duration;
+}
+
+@mixin animation-name($name...) {
+  -webkit-animation-name: $name;
+     -moz-animation-name: $name;
+          animation-name: $name;
+}
+
+@mixin animation-timing($timing...) {
+  -webkit-animation-timing-function: $timing;
+     -moz-animation-timing-function: $timing;
+          animation-timing-function: $timing;
+}
+
+@mixin backface-visibility($visibility...) {
+  -webkit-backface-visibility: $visibility;
+          backface-visibility: $visibility;
+}
+
+@mixin background-clip($clip...) {
+  -webkit-background-clip: $clip;
+          background-clip: $clip;
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+@mixin font-smoothing($smoothing...) {
+  -webkit-font-smoothing: $smoothing;
+          font-smoothing: $smoothing;
+}
+
+@mixin perspective($perspective...) {
+  -webkit-perspective: $perspective;
+          perspective: $perspective;
+}
+
+@mixin touch-action($action...) {
+  -ms-touch-action: $action;
+      touch-action: $action;
 }
 
 @mixin transform($transform...) {
@@ -46,41 +100,6 @@
           transition:         transform $timing;
 }
 
-@mixin box-shadow($shadow...) {
-  -webkit-box-shadow: $shadow;
-     -moz-box-shadow: $shadow;
-          box-shadow: $shadow;
-}
-
-@mixin animation($animation...) {
-  -webkit-animation: $animation;
-          animation: $animation;
-}
-
-@mixin animation-name($name...) {
-  -webkit-animation-name: $name;
-     -moz-animation-name: $name;
-          animation-name: $name;
-}
-
-@mixin animation-direction($direction...) {
-  -webkit-animation-direction: $direction;
-     -moz-animation-direction: $direction;
-          animation-direction: $direction;
-}
-
-@mixin animation-duration($duration...) {
-  -webkit-animation-duration: $duration;
-     -moz-animation-duration: $duration;
-          animation-duration: $duration;
-}
-
-@mixin animation-timing($timing...) {
-  -webkit-animation-timing-function: $timing;
-     -moz-animation-timing-function: $timing;
-          animation-timing-function: $timing;
-}
-
 @mixin user-select($user-select...) {
   -webkit-user-select: $user-select;
      -moz-user-select: $user-select;
@@ -88,31 +107,24 @@
           user-select: $user-select;
 }
 
-@mixin touch-action($action...) {
-  -ms-touch-action: $action;
-      touch-action: $action;
-}
+// =========================
+// Helper Mixins
+// =========================
+@mixin clearfix {
+  & {
+    position: relative;
+  }
 
-@mixin backface-visibility($visibility...) {
-  -webkit-backface-visibility: $visibility;
-          backface-visibility: $visibility;
-}
+  &:after {
+    display: table;
+    content: " ";
+  }
 
-@mixin perspective($perspective...) {
-  -webkit-perspective: $perspective;
-          perspective: $perspective;
+  &:before,
+  &:after {
+    clear: both;
+  }
 }
-
-@mixin font-smoothing($smoothing...) {
-  -webkit-font-smoothing: $smoothing;
-          font-smoothing: $smoothing;
-}
-
-@mixin background-clip($clip...) {
-  -webkit-background-clip: $clip;
-          background-clip: $clip;
-}
-
 
 // =========================
 // Animation Setup
@@ -124,33 +136,5 @@
 
   @keyframes #{$name} {
     @content;
-  }
-}
-
-
-// =========================
-// Grid System Setup
-// =========================
-@mixin build-columns($size, $columns: 12) {
-  @for $i from $columns through 0 {
-    $width: (100% / $columns) * $i;
-
-    @if $i > 0 {
-      .col__#{$size}-#{$i} {
-        width: $width;
-      }
-    }
-
-    .col__#{$size}-offset-#{$i} {
-      margin-left: $width;
-    }
-
-    .col__#{$size}-pull-#{$i} {
-      right: $width;
-    }
-
-    .col__#{$size}-push-#{$i} {
-      left: $width;
-    }
   }
 }

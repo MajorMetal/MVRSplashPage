@@ -1,0 +1,43 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.75);
+  -moz-osx-font-smoothing: grayscale;
+  @include font-smoothing(antialiased);
+  @include box-shadow(-5px 0 15px 0 #888);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  @include screen-lg {
+    padding-top: 100vh;
+  }
+}
+
+section {
+  padding: 10px 15px;
+  @include clearfix;
+
+  @include screen-md {
+    padding: 15px;
+  }
+
+  @include screen-lg {
+    padding: 25px 15px;
+  }
+}

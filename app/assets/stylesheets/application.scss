@@ -5,7 +5,8 @@
 // =========================
 // Vendor
 // =========================
-@import "normalize.min";
+@import "bootstrap.min";
+@import "jasny-bootstrap.min";
 @import "font-awesome";
 
 // =========================
@@ -18,29 +19,14 @@
 @import "helpers/classes";
 
 // =========================
-// Structural
-// =========================
-@import "structural/grid";
-@import "structural/page";
-@import "structural/typography";
-
-// =========================
 // Components
 // =========================
-@import "components/button";
-@import "components/carousel/main";
-@import "components/container/desktop";
-@import "components/embed";
-@import "components/form/main";
-@import "components/image/desktop";
-@import "components/modal/desktop";
+
 
 // =========================
 // Sections
 // =========================
-@import "sections/events/main";
+@import "sections/page";
 @import "sections/footer";
-@import "sections/projects/main";
-@import "sections/timeline/desktop";
+@import "sections/navbar";
 @import "sections/vision";
-@import "sections/navbar/desktop";

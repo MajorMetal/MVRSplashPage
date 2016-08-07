@@ -1,13 +1,14 @@
 .vision {
-  h1,
-  h2 {
+  h1 {
+    margin: 0;
     text-transform: uppercase;
     text-align: center;
     font-weight: 900;
-  }
+    font-size: 50px;
 
-  h2 {
-    margin-bottom: 0.5em;
+    @include screen-md {
+      font-size: 100px;
+    }
   }
 
   span {
@@ -15,22 +16,8 @@
   }
 
   p {
-    max-width: 25em;
-    margin-right: auto;
+    max-width: 600px;
     margin-left: auto;
-  }
-
-  @include screen-md {
-    h2 {
-      line-height: 1.125;
-      font-size: 7em;
-      font-weight: 300;
-      letter-spacing: -0.035em;
-      margin-bottom: 0;
-    }
-
-    span {
-      display: block;
-    }
+    margin-right: auto;
   }
 }

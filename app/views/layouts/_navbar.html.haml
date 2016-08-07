@@ -1,19 +1,25 @@
-%nav#nav
-  %iframe{src: "https://www.youtube.com/embed/kbAuLJH7AjE"}
+%nav.navmenu.navmenu-inverse.navmenu-fixed-left.offcanvas-sm#navmenu{role: "navigation"}
+  %ul.nav.navmenu-nav
+    %li
+      %a{href: "#vision"} Vision
+    %li
+      %a{href: "#projects"} Projects
+    %li
+      %a{href: "#clients"} Clients
+    %li
+      %a{href: "#team"} Team
+    %li
+      %a{href: "#timeline"} Timeline
+    %li
+      %a{href: "#events"} Upcoming Events
+    %li
+      %a{href: "#contact"} Contact
 
-  .nav.nav_menu
-    %ul
-      %li
-        %a{href: "#vision"} Vision
-      %li
-        %a{href: "#projects"} Projects
-      %li
-        %a{href: "#clients"} Clients
-      %li
-        %a{href: "#team"} Team
-      %li
-        %a{href: "#timeline"} Timeline
-      %li
-        %a{href: "#events"} Upcoming Events
-      %li
-        %a{href: "#contact"} Contact
+
+.navbar.navbar-fixed-top#navbar
+  %button.navbar-toggle.collapsed#navbar-toggle{type: "button", data: {toggle: "offcanvas", target: "#navmenu", canvas: "#canvas"}}
+    %span.hamburger
+
+.nav-video
+  .embed-responsive.embed-responsive-16by9
+    %iframe.embed-responsive-item{src: "https://www.youtube.com/embed/kbAuLJH7AjE"}

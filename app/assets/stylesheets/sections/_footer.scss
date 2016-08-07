@@ -1,0 +1,49 @@
+.footer {
+  height: 50px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #222;
+
+  .row {
+    height: 50px;
+    max-width: 992px;
+    margin: 0 auto;
+  }
+
+  .col-xs-2,
+  .col-xs-4 {
+    display: none;
+
+    @include screen-lg {
+      display: block;
+    }
+  }
+
+  p,
+  a {
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    float: left;
+    width: 50px;
+    font-size: 32px;
+    text-decoration: none;
+  }
+}
+
+.social-media {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.fa-twitter-square {
+  color: #55acee;
+}
+
+.fa-facebook-square {
+  color: #3b5998;
+}

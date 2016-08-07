@@ -21,8 +21,8 @@
 // Structural
 // =========================
 @import "structural/grid";
-@import "structural/typography";
 @import "structural/page";
+@import "structural/typography";
 
 // =========================
 // Components
@@ -31,6 +31,7 @@
 @import "components/carousel/mobile";
 @import "components/container/mobile";
 @import "components/embed";
+@import "components/form/mobile";
 @import "components/image/mobile";
 @import "components/modal/mobile";
 
@@ -39,7 +40,6 @@
 // =========================
 @import "sections/events/mobile";
 @import "sections/footer";
-@import "sections/form/mobile";
 @import "sections/projects/mobile";
 @import "sections/timeline/mobile";
 @import "sections/vision";

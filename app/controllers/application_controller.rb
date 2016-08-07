@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   #
   # Returns nothing.
   def check_for_mobile
-    prepare_for_mobile if is_mobile_device?
+    prepare_for_mobile # if is_mobile_device?
   end
 
 

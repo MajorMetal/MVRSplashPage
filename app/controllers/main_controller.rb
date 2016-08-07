@@ -7,7 +7,7 @@
 
 class MainController < ApplicationController
   # Internal: Checks for mobile device.
-  before_filter :check_for_mobile, only: [:home]
+  # before_filter :check_for_mobile, only: [:home]
   # Internal: Builds contact email object.
   before_action :build_email
 
