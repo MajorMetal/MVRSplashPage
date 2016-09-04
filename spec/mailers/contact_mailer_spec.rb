@@ -2,7 +2,8 @@ require "rails_helper"
 
 
 RSpec.describe ContactMailer do
-  describe "build" do
+  describe ".build" do
+    subject(:mail) { ContactMailer.build(details) }
     let(:details) {
       ContactEmail.new({
         name: "Example",
@@ -10,12 +11,9 @@ RSpec.describe ContactMailer do
         message: "message",
       })
     }
-    let(:mail) { ContactMailer.build(details) }
 
 
-    it "renders the sender email" do
-      expect(mail.from).to eql([details.email])
-    end
+    it { expect(mail.from).to eql([details.email]) }
 
     it "renders the receiver email" do
       expect(mail.to).to eql([ENV["DEFAULT_EMAIL"]])
