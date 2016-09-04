@@ -1,22 +1,23 @@
 source 'https://rubygems.org'
 
-# =========================
-# App Core
-# =========================
-ruby '2.3.0'
 
-gem 'rails', '~> 4.2'
+# ==============================
+# Core
+# ==============================
+ruby '2.3.1'
+gem 'rails', '~> 5.0', '>= 5.0.0.1'
 gem 'pg', '~> 0.18.4'
-gem 'puma', '~> 3.4'
+gem 'puma', '~> 3.6'
+# gem 'turbolinks', '~> 5.0', '>= 5.0.1'
+# gem 'redis', '~> 3.3', '>= 3.3.1'
 
 
-# =========================
-# JS
-# =========================
-gem 'jquery-rails', '~> 4.1'
-gem 'therubyracer', '~> 0.12.2'
-gem 'uglifier', '~> 3.0'
-
+# ==============================
+# Javascript
+# ==============================
+gem 'therubyracer', '~> 0.12.2', platforms: :ruby
+gem 'uglifier', '~> 3.0', '>= 3.0.2'
+gem 'jquery-rails', '~> 4.2', '>= 4.2.1'
 
 # =========================
 # HTML
@@ -24,57 +25,42 @@ gem 'uglifier', '~> 3.0'
 gem 'haml-rails', '~> 0.9'
 
 
-# =========================
+# ==============================
 # CSS
-# =========================
-gem 'sass-rails', '~> 5.0'
-gem 'font-awesome-rails', '~> 4.6'
+# ==============================
+gem 'sass-rails', '~> 5.0', '>= 5.0.6'
+gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 
 
-# =========================
-# Services
-# =========================
-gem 'actionmailer', '~> 4.2'
-
-
-# =========================
+# ==============================
 # Utility
-# =========================
-gem 'figaro', '~> 1.1'
+# ==============================
 gem 'active_device', '~> 1.2'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 
-# =========================
-# Documentation
-# =========================
-group :doc do
-  gem 'sdoc', '~> 0.4.1'
-end
-
-
-# =========================
-# Development
-# =========================
+# ==============================
+# Enviroment Specific
+# ==============================
 group :development do
-  gem 'spring', '~> 1.7'
-  gem 'byebug', '~> 9.0'
-  gem 'web-console', '~> 3.0'
-  gem 'quiet_assets', '~> 1.1'
+  gem 'byebug', '~> 9.0', '>= 9.0.5'
+  gem 'listen', '~> 3.1', '>= 3.1.5'
+  gem 'spring', '~> 1.7', '>= 1.7.2'
+  gem 'spring-watcher-listen', '~> 2.0'
 end
 
-
-# =========================
-# Testing
-# =========================
 group :test do
-  gem 'rspec-rails', '~> 3.4'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  gem 'factory_girl_rails', '~> 4.7'
   gem 'simplecov', '~> 0.11.2', require: false
 end
 
-
-# =========================
-# Production
-# =========================
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
 end
+
+
+# ==============================
+# Windows
+# ==============================
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
