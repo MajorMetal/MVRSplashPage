@@ -222,6 +222,7 @@ DEPENDENCIES
   spring (~> 1.7, >= 1.7.2)
   spring-watcher-listen (~> 2.0)
   therubyracer (~> 0.12.2)
+  tzinfo-data
   uglifier (~> 3.0, >= 3.0.2)
   web-console (~> 3.3, >= 3.3.1)
 
