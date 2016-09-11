@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   root 'main#home'
   post :contact, to: 'main#contact'
-  get 'HackNHaunt', to: redirect('http://vrhacknhaunt.devpost.com')
+  get 'hacknhaunt', to: redirect('http://vrhacknhaunt.devpost.com')
 end
