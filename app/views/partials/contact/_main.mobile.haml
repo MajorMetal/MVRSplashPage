@@ -1,0 +1,12 @@
+.container#contact
+  = form_tag '/contact', method: :post, class: 'form' do
+    %h5 Contact Us
+
+    .input
+      = text_field_tag 'name', nil, id: 'contact_name', placeholder: 'Name'
+    .input
+      = email_field_tag 'email', nil, id: 'contact_email', placeholder: 'Email'
+    .input
+      = text_area_tag 'message', nil, id: 'contact_message', placeholder: 'Message'
+
+    = button_tag 'Send', type: 'submit', class: 'btn', data: {disable_with: 'Sending...'}

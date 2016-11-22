@@ -1,0 +1,61 @@
+.tab.fade#events-projects{role: 'tabpanel'}
+  .carousel.slide#events-projects-carousel{data: {ride: 'carousel', interval: 'false'}}
+    .carousel-inner{role: 'listbox'}
+      .item.active
+        .col-12
+          %h3 SoCal VR Conference and Expo
+
+        .col-3.col-offset-1
+          %img{src: asset_path('socalvr-1.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+        .col-4
+          .embed
+            %iframe{src: 'https://www.youtube.com/embed/kUFEE1b0cSo', allowfullscreen: 'true'}
+        .col-3
+          %img{src: asset_path('socalvr-2.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+
+        .col-8.col-offset-2
+          %p We teamed up with multiple VR communities to host the first ever SoCal VR Conference and Expo. Hosted at UCI’s Applied Innovation on July 12, 2015, there were over 700 attendees, 60 VR exhibitors, 35 key speakers on 8 different panels all streamed in 360° video.
+
+      .item
+        .col-12
+          %h3 VR Film School
+
+        .col-3.col-offset-1
+          %img{src: asset_path('vrfilm-1.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+        .col-4
+          .embed
+            %iframe{src: 'https://www.youtube.com/embed/TuapDf6Un7M', allowfullscreen: 'true'}
+        .col-3
+          %img{src: asset_path('vrfilm-2.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+
+        .col-8.col-offset-2
+          %p Welcome to VR Film School, a 2-day workshop teaching VR enthusiasts how to become VR filmmakers. The goal was to go from knowing absolutely nothing about VR to producing a 360° video that’s yours to share with the world. There were different educational tracks for different workflows like "Shooting with GoPro rigs" or "Shooting with the Theta camera". We brought together major VR film directors, hardware providers, and technical experts to help you get started on the right foot.
+
+      .item
+        .col-12
+          %h3 VR Hack
+
+        .col-3.col-offset-1
+          %img{src: asset_path('vrhack-1.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+        .col-4
+          .embed
+            %iframe{src: 'https://www.youtube.com/embed/UefMzgY2HIQ', allowfullscreen: 'true'}
+        .col-3
+          %img{src: asset_path('vrhack-2.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+
+        .col-8.col-offset-2
+          %p There’s something about a deadline that makes magic happen. Monster VR’s founders were also founders of Orange County VR. OCVR is a meetup group designed to be a nexus point for developers. OCVR holds multiple VR hackathons a year bringing together some the best VR developers in Southern California.
+
+
+    %a.left.carousel-control{href: '#events-projects-carousel', role: 'button', data: {slide: 'prev'}}
+      %span.fa.fa-chevron-left{aria: {hidden: 'true'}}
+      %span.sr Previous
+
+    %a.right.carousel-control{href: '#events-projects-carousel', role: 'button', data: {slide: 'next'}}
+      %span.fa.fa-chevron-right{aria: {hidden: 'true'}}
+      %span.sr Next
+
+    %ul.carousel-indicators
+      %li.active{data: {target: '#events-projects-carousel', slide: {to: '0'}}}
+      %li{data: {target: '#events-projects-carousel', slide: {to: '1'}}}
+      %li{data: {target: '#events-projects-carousel', slide: {to: '2'}}}

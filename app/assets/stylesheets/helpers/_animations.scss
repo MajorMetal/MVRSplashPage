@@ -1,0 +1,17 @@
+/*     Button Click
+-------------------------*/
+@include animation-setup(buttonClick) {
+  from {
+    opacity: 0;
+    @include transform(scale(0,0));
+  }
+
+  30% {
+    opacity: .26;
+  }
+
+  to {
+    opacity: 0;
+    @include transform(scale(1,1));
+  }
+}

@@ -1,0 +1,26 @@
+%nav.nav#nav
+  %ul.nav__menu
+    %li
+      %p#about-toggle{tabindex: '0', data: {toggle: 'collapse', target: '#about-collapse'}, aria: {expanded: 'false', controls: 'about-collapse'}} About
+      %ul.nav__sub-menu.collapse#about-collapse{aria: {labelledby: 'about-toggle'}}
+        %li
+          %a{href: '#vision'} Vision
+        %li
+          %a{href: '#clients'} Partners
+        %li
+          %a{href: '#team'} Team
+        %li
+          %a{href: '#timeline'} Timeline
+
+    %li
+      %a{href: '#projects'} Projects
+    %li
+      %a{href: '#events'} Upcoming Events
+    %li
+      %a{href: '#contact'} Contact
+
+%header.header#header
+  %label.sr{for: 'nav-toggle'} Toggle Navigation
+  %input.nav-toggle#nav-toggle{type: 'checkbox'}
+  %label.nav-toggle{for: 'nav-toggle'}
+    .hamburger

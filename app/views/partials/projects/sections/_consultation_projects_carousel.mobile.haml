@@ -1,0 +1,36 @@
+.collapse#consultation-projects-content{role: 'tabpanel', aria: {labelledby: 'consultation-projects'}}
+  .carousel.slide#consultation-projects-carousel{data: {ride: 'carousel', interval: 'false'}}
+    %a.left.carousel-control{href: '#consultation-projects-carousel', role: 'button', data: {slide: 'prev'}}
+      %span.fa.fa-chevron-left{aria: {hidden: 'true'}}
+      %span.sr Previous
+
+    %a.right.carousel-control{href: '#consultation-projects-carousel', role: 'button', data: {slide: 'next'}}
+      %span.fa.fa-chevron-right{aria: {hidden: 'true'}}
+      %span.sr Next
+
+    %ul.carousel-indicators
+      %li.active{data: {target: '#consultation-projects-carousel', slide: {to: '0'}}}
+      %li{data: {target: '#consultation-projects-carousel', slide: {to: '1'}}}
+      %li{data: {target: '#consultation-projects-carousel', slide: {to: '2'}}}
+
+    .carousel-inner{role: 'listbox'}
+      .item.active
+        .col-sm-4
+          %h4 VR Development
+
+          %img{src: asset_path('vr-development.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+          %p We have experience developing on the latest VR and AR hardware. Oculus Rift, HTC Vive, Samsung Gear VR, Google Cardboard, to name a few. If you need help fleshing out an idea, or getting an idea built, we can help.
+
+      .item
+        .col-sm-4
+          %h4 Training
+
+          %img{src: asset_path('training.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+          %p VR has revolutionized the way we learn and communicate. We can help bring you and your company up to speed. Together, we will identify your needs, develop a comprehensive plan, and train your team on how to effectively leverage virtual reality and 360° video technologies.
+
+      .item
+        .col-sm-4
+          %h4 Business Strategy
+
+          %img{src: asset_path('business-strategy.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+          %p With virtual reality comes the next wave of opportunities to capture new business and engage your existing customers. Let’s work together on developing strategies to make sure you’re getting the most out of VR.

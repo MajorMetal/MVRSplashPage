@@ -1,0 +1,116 @@
+.container#timeline
+  .timeline
+    .events
+      .events__container
+        %ul.events__list
+          %li
+            %a.selected{href: "#", data: {date: "01/08/2013"}} 01 Aug
+          %li
+            %a{href: "#", data: {date: "14/04/2014"}} 14 Apr
+          %li
+            %a{href: "#", data: {date: "19/09/2014"}} 19 Sep
+          %li
+            %a{href: "#", data: {date: "01/01/2015"}} 01 Jan
+          %li
+            %a{href: "#", data: {date: "12/07/2015 T 00:00"}} 12 Jul
+          %li
+            %a{href: "#", data: {date: "12/07/2015 T 23:59"}} 12 Jul
+          %li
+            %a{href: "#", data: {date: "16/11/2015"}} 16 Nov
+          %li
+            %a{href: "#", data: {date: "20/11/2015"}} 20 Nov
+          %li
+            %a{href: "#", data: {date: "05/12/2015"}} 05 Dec
+          %li
+            %a{href: "#", data: {date: "20/04/2016"}} 20 Apr
+
+          %span.filling-line{aria: {hidden: "true"}}
+    
+      %ul.events__navigation
+        %li
+          %a.prev.inactive{href: "#"}Prev
+        %li
+          %a.next{href: "#"} Next
+
+      %ul.events__content
+        %li.selected{data: {date: "01/08/2013"}}
+          .col-7
+            %h3 VR Birth
+            %h6 August 1st, 2013
+            %p Dylan, our founder, received the Oculus VR development kit from Kickstarter, and tried the game, Zelda, for the first time in VR. He was hooked! Dylan decided that his life mission was to gift people with that same sense of wonder.
+          .col-5
+            %img{src: asset_path('vr-birth.jpg')}
+
+        %li{data: {date: "14/04/2014"}}
+          .col-7
+            %h3 OCVR
+            %h6 April 14th, 2014
+            %p OCVR (Orange County Virtual Reality) became the premiere meetup group for all things VR and AR: industry thought leaders, developers, technologists, entrepreneurs, students, recruiters, hardware and software vendors. OCVR specializes in big community events such as hackathons, social mixers, large-scale conferences, and educational events.
+          .col-5
+            %img{src: asset_path('ocvr.jpg')}
+
+        %li{data: {date: "19/09/2014"}}
+          .col-7
+            %h3 VR Dev House
+            %h6 September 19th, 2014
+            %p The team consulted, developed, and implemented the virtual reality arm for a large product development house with over a billion units of product sold.
+          .col-5
+            %img{src: asset_path('vr-development.jpg')}
+
+        %li{data: {date: "01/01/2015"}}
+          .col-7
+            %h3 Monster VR
+            %h6 January 1st, 2015
+            %p Monster VR is officially launched as its own community-driven, creative development house. The mission is to give life to big ideas by blending the internet of things (IOT), robotics, virtual reality, and augmented reality.
+          .col-5
+            %img{src: asset_path('monstervr.png')}
+
+        %li{data: {date: "12/07/2015 T 00:00"}}
+          .col-7
+            %h3 SoCal VR Con
+            %h6 July 12th, 2015
+            %p Monster VR hosted the first ever multi-community VR conference in Southern California at the University of California, Irvine. There were 800 attendees, 60 exhibitors, 35 speakers, 8 panels, and it was streamed in 360° video. The VR communities included Long Beach VR, San Diego VR, Silicon Valley VR, San Francisco VR, VR Los Angeles, and Las Vegas VR.
+          .col-5
+            %img{src: asset_path('socalvrcon.png')}
+
+        %li{data: {date: "12/07/2015 T 23:59"}}
+          .col-7
+            %h3 San Diego Zoo
+            %h6 July 12th, 2015
+            %p The San Diego Zoo contacted Monster VR to produce a 360° video. The Tech to Reconnect program implemented different technologies to allow people to empathize with the animal world. Viewers had an amazing opportunity to experience life in the zoo’s many animal habitats.
+          .col-5
+            %img{src: asset_path('techtoreconnect.jpg')}
+
+        %li{data: {date: "16/11/2015"}}
+          .col-7
+            %h3 Monster Mondays
+            %h6 November 16th, 2015
+            %p This is a monthly community event showcasing indie style VR demos with “alcohol-infused enthusiasm” at a Santa Ana, CA, speakeasy. Like other Monster VR events, it’s a fun mixer for VR and AR communities to connect, learn, and find business.
+          .col-5
+            %img{src: asset_path('monster-monday.jpg')}
+
+        %li{data: {date: "20/11/2015"}}
+          .col-7
+            %h3 UCI Hackathon
+            %h6 November 20th, 2015
+            %p Sponsored by Oculus and Unity, Monster VR organized a hackathon at the University of California, Irvine. In addition to being judges for the event, Monster VR also provided mentorship, for the developers, which at the time, was the world’s largest hackathon. This event was held at the first ever North American eSports arena.
+          .col-5
+            %img{src: asset_path('hackuci.png')}
+
+        %li{data: {date: "05/12/2015"}}
+          .col-7
+            %h3 VR Film School
+            %h6 December 5th, 2015
+            %p This 2-day educational workshop taught participants how to go from knowing absolutely nothing about 360° video to becoming VR filmmakers and directors. From 15 year-old video enthusiasts to Oscar-winning producers, students came from a diverse cross section of demographics and professions.
+          .col-5
+            .embed
+              %iframe{src: 'https://www.youtube.com/embed/TuapDf6Un7M', allowfullscreen: 'true'}
+
+        %li{data: {date: "20/04/2016"}}
+          .col-7
+            %h3 Sweet Escape
+            %h6 April 20th, 2016
+            %p You and your friends are fighting to escape a treacherous candy land. Reach the lollipop finish line first if you want to survive. Climb chewy gumdrops, monkeybar over great heights, jump from candy bar to candy bar, and be careful not to lose your grip. Falling to your doom feels as real as it gets.
+          .col-5
+            %img{src: asset_path('sweetescape.png')}
+

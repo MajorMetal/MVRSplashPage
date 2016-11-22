@@ -1,0 +1,50 @@
+.footer {
+  position: relative;
+  height: 48px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: rgba(#FFF, .8);
+  background-color: $gray-900;
+  z-index: 25;
+  @include transition(left .3s cubic-bezier(.4,0,.2,1));
+
+  &.nav--open {
+    left: 260px;
+  }
+
+  p,
+  a {
+    margin: 0;
+    line-height: 48px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  a{
+    display: inline-block;
+    float: left;
+    width: 48px;
+    font-size: 24px;
+    text-decoration: none;
+    text-align: center;
+  }
+} // end '.footer'
+
+.social-media {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.fa-twitter-square {
+  color: #55ACEE;
+}
+
+.fa-facebook-square {
+  color: #3B5998;
+}
+.fa-youtube-play {
+  color: #e52d27;
+}

@@ -1,0 +1,43 @@
+.tab.fade#videos-projects{role: 'tabpanel'}
+  .carousel.slide#videos-projects-carousel{data: {ride: 'carousel', interval: 'false'}}
+    .carousel-inner{role: 'listbox'}
+      .item.active
+        .col-12
+          %h3 San Diego Zoo
+
+        .col-5.col-offset-1
+          %img{src: asset_path('sdzoo-1.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+        .col-5
+          %img{src: asset_path('sdzoo-2.png'), data: {toggle: 'modal', target: '#image-modal'}}
+        .col-12
+          %a.btn{href: 'https://www.youtube.com/watch?v=XZe6Cbh5CYo&feature=youtu.be', target: '_blank'} Watch 360 Video
+
+        .col-8.col-offset-2
+          %p This was a 360° video produced for San Diego’s Tech to Reconnect program. Designed to use creative technologies to gain empathy for animals by seeing through the eyes of an animal. This was in conjunction with a San Diego Zoo, branded Google Cardboard.
+
+      .item
+        .col-12
+          %h3 VlogKill
+
+        .col-5.col-offset-1
+          %img{src: asset_path('vlog-kill-1.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+        .col-5
+          %img{src: asset_path('vlog-kill-2.jpg'), data: {toggle: 'modal', target: '#image-modal'}}
+        .col-12
+          %a.btn{href: 'https://www.youtube.com/watch?time_continue=59&v=Zy4VVV6TGd0', target: '_blank'} Watch 360 Video
+
+        .col-8.col-offset-2
+          %p What happens when you mix a famous YouTube vlogger, like PewDiePie, with the TV shows “The X-Files” and “Dexter”? Our entry into the indie, Samsung VR competition, Gone in 60 Seconds. The experience pushed the boundaries of 360° storytelling (in reverse) with the beautiful backdrop of Laguna Beach.
+
+
+    %a.left.carousel-control{href: '#videos-projects-carousel', role: 'button', data: {slide: 'prev'}}
+      %span.fa.fa-chevron-left{aria: {hidden: 'true'}}
+      %span.sr Previous
+
+    %a.right.carousel-control{href: '#videos-projects-carousel', role: 'button', data: {slide: 'next'}}
+      %span.fa.fa-chevron-right{aria: {hidden: 'true'}}
+      %span.sr Next
+
+    %ul.carousel-indicators
+      %li.active{data: {target: '#videos-projects-carousel', slide: {to: '0'}}}
+      %li{data: {target: '#videos-projects-carousel', slide: {to: '1'}}}

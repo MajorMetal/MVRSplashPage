@@ -1,0 +1,35 @@
+/ .container.events#events{role: 'tablist', aria: {multiselectable: 'false'}}
+/   .row.event
+/     .event__header#hack-n-haunt{role: 'tab'}
+/       .col-6
+/         %h3 Monster VR Halloween Party
+/         %h6 OCT 31st, 2016
+/       .col-6
+/         %a.btn{href: 'http://ow.ly/ZubR302McJh'} Apply Here
+
+/     .event__body.collapse.in#hack-n-haunt-body{role: 'tabpanel', aria: {labelledby: 'hack-n-haunt'}}
+/       .col-6
+/         %h6 Location: The Deck: 627 Sleepy Hollow Lane Laguna Beach, CA 
+/         %p.event__details We are showcasing a few of the winning VR experiences from our recent Hackathon with Titmouse Animation Studios.
+
+
+
+/       .col-6.event__timer
+/         .row#hack-n-haunt-timer
+/           .col-3.col-offset-1
+/             %h1.days
+/           .col-3
+/             %h1.hours
+/           .col-1
+/             %h1 :
+/           .col-3
+/             %h1.minutes
+/         .row
+/           .col-3.col-offset-1
+/             %h6 Days
+/           .col-3
+/             %h6 Hours
+/           .col-3.col-offset-1
+/             %h6 Minutes
+
+/     .event__controls{data: {toggle: 'collapse', parent: '#events', target: '#hack-n-haunt-body'}, aria: {expanded: 'true', controls: 'hack-n-haunt-body'}}

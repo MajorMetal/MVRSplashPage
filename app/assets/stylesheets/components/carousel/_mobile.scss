@@ -1,0 +1,31 @@
+@import 'components/carousel/main';
+
+.carousel-inner {
+  top: 32px;
+  margin-bottom: 16px;
+}
+
+.item.active {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.carousel-control {
+  top: 8px;
+  height: 32px;
+  width: 10%;
+  bottom: auto;
+
+  & .fa-chevron-left,
+  & .fa-chevron-right {
+    top: 0;
+    margin-top: 0;
+  }
+}
+
+.carousel-indicators {
+  top: 8px;
+  bottom: auto;
+  left: 10%;
+  width: 80%;
+}

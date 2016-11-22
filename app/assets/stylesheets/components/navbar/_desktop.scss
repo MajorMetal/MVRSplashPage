@@ -1,0 +1,143 @@
+.header {
+  position: relative;
+  width: 100%;
+  z-index: 50;
+
+  iframe {
+    height: 100vh;
+    /*eight: calc(100vh - 48px);*/
+    width: 100%;
+    border: 0;
+    background-color: $gray-900;
+    filter: brightness(50%);
+  }
+
+  #MVRlogo{
+    position: absolute;
+    top:50%;
+    left:50%;
+    max-width:100%;
+    -webkit-transform:translateY(-50%) translateX(-50%);
+  }
+/*  .buy-button{    
+  position: absolute;
+  z-index: 51;
+  border: none;
+  text-align: center;
+  font-family: myFirstFont, "Arial Black", Gadget, sans-serif;
+  font-size: 28px;
+  padding: 10px 80px 7px;
+  color: #222;
+  background: #ff67cc;
+  border-bottom: 15px solid #ed4463;
+  display: inline-block;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.3);
+  -webkit-clip-path: polygon(3px 3px, 100% 0, 99% 100%, 0 100%);
+  clip-path: polygon(3px 3px, 100% 0, 99% 100%, 0 100%);
+  text-decoration: none;
+  top:10;
+  left:10;
+  } */
+  
+
+} // end '.header'
+
+
+.nav {
+  position: absolute;
+  top: 100vh;
+  top: calc(100vh - 48px);
+  min-height: 48px;
+  width: 100%;
+  z-index: 50;
+
+  li,
+  p,
+  a {
+    position: relative;
+    display: block;
+  }
+
+  li {
+    float: left;
+    font-weight: 500;
+    letter-spacing: .01em;
+    text-align: center;
+
+    &.active a {
+      color: rgba($light-green-500, .75);
+    }
+  } // end '.nav li'
+
+  p,
+  a {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(#FFF,.8);
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    @include transition(background-color .25s);
+
+    &:focus {
+      outline: none;
+    }
+  } // end '.nav p,a'
+
+  a {
+    text-decoration: none;
+  }
+
+} // end '.nav'
+
+
+.nav__menu {
+  height: 48px;
+  min-width: 992px;
+  background-color: $gray-900;
+
+  li {
+    width: 25%;
+    padding: 0 24px;
+  }
+
+  p,
+  a {
+    line-height: 48px;
+
+    &.focused,
+    &:focus {
+      background-color: $gray-700;
+    }
+
+    &:hover {
+      background-color: $gray-800;
+    }
+  } // end '.nav__menu p,a'
+
+} // end '.nav__menu'
+
+
+.nav__sub-menu {
+  height: 80px;
+  background-color: $gray-700;
+
+  li {
+    width: 150px;
+  }
+
+  a {
+    line-height: 80px;
+
+    &:focus {
+      background-color: $gray-500;
+    }
+
+    &:hover {
+      background-color: $gray-600;
+    }
+  } // end '.nav__sub-menu a'
+
+} // end '.nav__sub-menu'

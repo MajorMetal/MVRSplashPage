@@ -1,0 +1,19 @@
+@import 'components/events/main';
+
+.event {
+  padding: 16px 0 8px;
+
+  .btn {
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+}
+
+.event__controls {
+  height: 24px;
+
+  &:after {
+    padding: 8px 8px 4px;
+  }
+}

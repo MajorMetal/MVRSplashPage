@@ -1,0 +1,48 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  min-width: 160px;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 3px;
+  color: rgba(#FFF,.8);
+  background-color: $light-green-500;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  @include touch-action(manipulation);
+  @include user-select(none);
+
+  &.btn--sml {
+    padding: 6px 12px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    background-color: $light-green-700;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: .65;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $light-green-500;
+    }
+  } // end '.btn[disabled]'
+
+  &.btn-black {
+    font-family: inherit;
+    background-color: $gray-900;
+
+    &:before {
+      font: normal normal normal 14px/1 FontAwesome;
+      padding-right: 10px;
+    }
+  }
+
+} // end .btn

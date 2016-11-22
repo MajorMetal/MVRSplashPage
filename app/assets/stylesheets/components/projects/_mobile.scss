@@ -1,0 +1,13 @@
+@import 'components/projects/main';
+
+.projects {
+  border: 0;
+
+  [role='tab'] {
+    margin: 24px 0;
+  }
+
+  h6 {
+    line-height: 44px;
+  }
+}

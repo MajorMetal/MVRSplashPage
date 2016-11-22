@@ -1,0 +1,129 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+small,
+button,
+.btn {
+  color: inherit;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+p,
+a,
+small,
+button,
+.btn {
+  font-weight: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  margin-bottom: 0;
+}
+
+h1 {
+  line-height: 126px;
+  font-size: 112px;
+  font-weight: 300;
+  letter-spacing: -4px;
+}
+
+h2 {
+  line-height: 64px;
+  font-size: 56px;
+  letter-spacing: -.25px;
+}
+
+h3 {
+  margin-bottom: 24px;
+  line-height: 48px;
+  font-size: 40px;
+}
+
+h4 {
+  margin-bottom: 16px;
+  line-height: 40px;
+  font-size: 34px;
+}
+
+h5 {
+  margin-bottom: 8px;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+h6 {
+  margin-bottom: 8px;
+  line-height: 28px;
+  font-size: 20px;
+  letter-spacing: .1px;
+}
+
+p,
+a {
+  margin-bottom: .5em;
+  line-height: 24px;
+  letter-spacing: .15px;
+}
+
+p {
+  text-align: justify;
+
+  &.subheader {
+    line-height: 28px;
+    font-size: 16px;
+  }
+
+  &.bold {
+    font-weight: 500;
+  }
+} // end 'p'
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+} // end 'a'
+
+small {
+  display: inline-block;
+  line-height: 24px;
+  font-size: 12px;
+  letter-spacing: .25px;
+}
+
+button,
+.btn {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .14px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
